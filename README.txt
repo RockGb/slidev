@@ -58,3 +58,5 @@ function greet(name) { return `Hello, ${name}!`; }
 This isn't as comprehensive as the documentation. I'll advise you read the documentation as I'm also doing that.
 
 Learn more about Slidev at the https://sli.dev/.
+
+kachi's change
