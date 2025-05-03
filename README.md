@@ -13,21 +13,24 @@ To create a new slide, just add three dashes (---) on a new line:
 
 1. Adding Titles
 ---
-# Slide Title
+'# Slide Title
 
-Some paragraph text here.
+'Some paragraph text here.'
+<br>
 
 3. Add Content
 You can use regular Markdown:
 
 Headers:
-# H1
-## H2
-### H3
+'# H1
+'## H2
+'### H3
+<br>
 
 3. Text and Formatting:
 This is * italic *, this is ** bold **, this is ~~ strikethrough ~~. 
 Note: You're not meant to add space, I just did, so it doesnt just render them. 
+<br>
 
 4. Code Blocks
 To add code blocks, all you have to do is add three backticks (```)
@@ -36,6 +39,7 @@ To add code blocks, all you have to do is add three backticks (```)
 ``` js
 function greet(name) { return `Hello, ${name}!`; }
 ```
+<br>
 
 5. To add styles, you can add class to your elements. Example below:
 '# Project Title {.header}'
@@ -48,8 +52,11 @@ function greet(name) { return `Hello, ${name}!`; }
 }
 </style>
 
+<br>
+
 6. To end each slide, use three dashes ---. So, usually, three dashes come after the styling. 
 
 
 This isn't as comprehensive as the documentation. I'll advise you read the documentation as I'm also doing that.
+<br>
 Learn more about Slidev at the [documentation](https://sli.dev/).
