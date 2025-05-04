@@ -498,7 +498,8 @@ layout: default
   - Tabs
   - URLs
   - Alerts
-  <style>
+
+ <style>
 .header-title {
   color: #3B82F6;
   font-size: 2.5em;
