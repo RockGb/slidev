@@ -489,7 +489,38 @@ layout: two-cols
 
 # Month 1 Week 4 {.header-title}
 
-### summary
+## summary
+ # BOM, DOM, and CSSOM
+
+## BOM (Browser Object Model)
+
+- BOM is the interface between JavaScript and the browser.
+- It allows JavaScript to interact with the **browser itself** — such as:
+  - The window
+  - Tabs
+  - URLs
+  - Alerts
+
+---
+
+## CSSOM (CSS Object Model)
+
+- CSSOM is the interface between JavaScript and CSS.
+- It allows JavaScript to interact with and **manipulate CSS styles**.
+- It's how the browser represents **all the CSS** (from `<style>`, external files, or JavaScript) as an object model.
+
+---
+
+## DOM (Document Object Model)
+
+- DOM is the interface between JavaScript and **HTML + CSS**.
+- It represents the web page as an **object tree structure**.
+- JavaScript uses the DOM to read, access, and change elements on the page.
+- DOM is a **tree-like structure** converted from HTML tags.
+- These HTML elements are connected by **nodes** (element nodes, text nodes, etc.).
+
+---
+
 ## Documentation
 
 ::right::
