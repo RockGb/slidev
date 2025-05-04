@@ -915,29 +915,6 @@ The `package.json` file is the configuration file for Node.js projects. It defin
 ```
 ---
 
-# Thank You! {.thank-you}
-
-## Questions & Discussion
-
-<style>
-.thank-you {
-  background: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  font-size: 3em;
-}
-</style>
-
----
-transition: fade-out
-layout: default
----
-
-<<<<<<< HEAD
-
-=======
 # Month 2 Week 1 {.header-title}
 
 ## Cont. of DOM in JavaScript (Selecting an Element by Its Unique Identifier (Id) and Styling It Within JavaScript)
@@ -949,6 +926,8 @@ An HTML document could be declared with an empty body.
 The **Id** of each empty element node can then be selected using `querySelector` or `getElementById`.  
 The `innerHTML` can then be assigned a value after a variable has been declared.  
 The selected elements can be styled as preferred within the JavaScript code.
+
+---
 
 ### Example of a Document with an Empty Body
 
@@ -969,7 +948,10 @@ The selected elements can be styled as preferred within the JavaScript code.
   </body>
 </html>
 ```
-## Example of Selecting an Element by Its Unique Identifier (Id) Using `querySelector` and `getElementById`, and Styling the Selected Elements...
+<br>
+### Example of Selecting an Element by Its Unique Identifier (Id) Using `querySelector` and `getElementById`, and Styling the Selected Elements...
+
+---
 
 You can select HTML elements by their unique `id` using either `querySelector` or `getElementById`. After selection, you can modify their content and apply styles directly with JavaScript.
 
@@ -990,4 +972,21 @@ h1Element.innerHTML = "Altschool FrontEnd Circle-5";
 h2Element.innerHTML =
   "Summary of what we have learnt since the beginning of 2nd semester.";
   ```
->>>>>>> 36046ea0376e002b5fcf685e6e78431a228a4829
+---
+  
+  # Thank You! {.thank-you}
+
+## Questions & Discussion
+
+<style>
+.thank-you {
+  background: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 3em;
+}
+</style>
+
+---
