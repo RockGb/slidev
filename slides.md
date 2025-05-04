@@ -651,6 +651,247 @@ layout: center
 class: text-center
 ---
 
+
+# JavaScript Modules and Related Concepts
+### WEEK 1 - EXTRA CLASS
+
+---
+
+## 1. Modules and Modularity
+
+**Modularity** refers to breaking down a program into smaller, manageable, and reusable pieces (modules).
+
+<!-- Add a list with staggered animation -->
+<v-clicks>
+
+**Why use modularity?**
+
+- Improved code organization
+- Easier maintenance and debugging
+- Reusability across projects
+
+</v-clicks>
+
+---
+
+<!-- Add fade in animation to code blocks -->
+<div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }">
+
+```javascript
+// math.js (module)
+export function add(a, b) {
+  return a + b;
+}
+
+export function subtract(a, b) {
+  return a - b;
+}
+```
+<br>
+
+```javascript
+// app.js (main file)
+import { add, subtract } from "./math.js";
+```
+
+</div>
+
+## <!-- Add slide transitions -->
+
+<br>
+
+## 2. Bundlers
+
+<!-- Add click animations to list items -->
+<v-clicks>
+
+**Popular bundlers:**
+
+- Webpack
+- Rollup
+- Vite
+- Parcel
+
+</v-clicks>
+
+---
+
+### Why use bundlers?
+
+- Support for modular code in environments that don't support modules natively.
+- Code splitting and optimization (tree-shaking, minification).
+
+<br>
+
+### Webpack Example (Conceptual):
+
+<br>
+
+```javascript
+// index.js
+import { greet } from "./utils.js";
+
+greet("World");
+```
+<br>
+
+```javascript
+// utils.js
+export function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+```
+
+---
+
+## 3. Imports and Exports
+
+### a) Named Export/Import
+
+```javascript
+// math.js
+export function add(a, b) {
+  return a + b;
+}
+export function subtract(a, b) {
+  return a - b;
+}
+```
+
+```javascript
+// app.js
+import { add, subtract } from "./math.js";
+```
+<br>
+
+### b) Renamed Exports/Imports
+
+```javascript
+// math.js
+function add(a, b) {
+  return a + b;
+}
+export { add as sum };
+```
+
+```javascript
+// app.js
+import { sum as addNumbers } from "./math.js";
+```
+---
+
+### c) Default Export/Import
+
+<br>
+
+```javascript
+// logger.js
+export default function log(message) {
+  console.log(message);
+}
+```
+
+<br>
+
+```javascript
+// app.js
+import log from "./logger.js";
+```
+
+<br>
+
+### d) Dynamic Import
+
+<br>
+
+```javascript
+// app.js
+button.addEventListener("click", async () => {
+  const module = await import("./math.js");
+  console.log(module.add(2, 3));
+});
+```
+
+---
+
+## 4. ESM (ECMAScript Modules)
+
+**ESM** is the standardized module system for JavaScript (using `import`/`export`). It’s supported in modern browsers and Node.js.
+
+### Enabling ESM in Node.js:
+
+You can:
+
+- Use the `.mjs` file extension **or**
+- Add `"type": "module"` in `package.json`
+
+<br>
+
+```json
+// package.json
+{
+  "type": "module"
+}
+```
+---
+
+### Example:
+
+<br>
+<br>
+
+```javascript
+// utils.mjs or utils.js (with type module in package.json)
+export const greet = (name) => `Hello, ${name}!`;
+```
+
+<br>
+
+```javascript
+// main.mjs or main.js
+import { greet } from "./utils.mjs";
+console.log(greet("ESM"));
+```
+
+---
+
+## 5. Package.json
+
+The `package.json` file is the configuration file for Node.js projects. It defines:
+
+- Project metadata (name, version, description)
+- Dependencies and devDependencies
+- Scripts for running tasks
+- Module type (CommonJS or ESM)
+- Entry points (e.g., `main`, `module`)
+
+---
+
+### Example:
+
+<br>
+
+```json
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "A sample project demonstrating modules",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "webpack": "^5.0.0"
+  }
+}
+```
+---
+
 # Thank You! {.thank-you}
 
 ## Questions & Discussion
@@ -671,4 +912,59 @@ transition: fade-out
 layout: default
 ---
 
+<<<<<<< HEAD
 
+=======
+# Month 2 Week 1 {.header-title}
+
+## Cont. of DOM in JavaScript (Selecting an Element by Its Unique Identifier (Id) and Styling It Within JavaScript)
+
+### Summary:
+
+DOM (also known as **Document Object Model**) is the object representation of HTML.  
+An HTML document could be declared with an empty body.  
+The **Id** of each empty element node can then be selected using `querySelector` or `getElementById`.  
+The `innerHTML` can then be assigned a value after a variable has been declared.  
+The selected elements can be styled as preferred within the JavaScript code.
+
+### Example of a Document with an Empty Body
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js" defer></script>
+    <title>Dom in JavaScript</title>
+  </head>
+  <body>
+    <div id="container">
+    <h1 id="circle_5"></h1>
+    <p id="semester_2"></p>
+</div>
+  </body>
+</html>
+```
+## Example of Selecting an Element by Its Unique Identifier (Id) Using `querySelector` and `getElementById`, and Styling the Selected Elements...
+
+You can select HTML elements by their unique `id` using either `querySelector` or `getElementById`. After selection, you can modify their content and apply styles directly with JavaScript.
+
+```js
+//Selecting elements by id using the querySelector
+const divElement = document.getElementById("container");
+const h1Element = document.querySelector("#circle_5");
+const h2Element = document.getElementById("semester_2");
+//throw an error if elements are not found
+if (h1Element === null) {
+};
+if (h2Element === null) {
+}
+//If found, display these messages into the inner text and style it
+divElement.style =
+  "Justify-content: center; text-align: center; background-color: #f7f7f7; padding: 20px; margin: 20px 0; border: 1px solid #ccc;border-radius: 15px;";
+h1Element.innerHTML = "Altschool FrontEnd Circle-5";
+h2Element.innerHTML =
+  "Summary of what we have learnt since the beginning of 2nd semester.";
+  ```
+>>>>>>> 36046ea0376e002b5fcf685e6e78431a228a4829
