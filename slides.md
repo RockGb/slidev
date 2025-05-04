@@ -484,15 +484,14 @@ class Feature {
 
 ---
 transition: slide-left
-layout: two-cols
+layout: default
 ---
 
 # Month 1 Week 4 {.header-title}
 
-## summary
- # BOM, DOM, and CSSOM
+## BOM, DOM, and CSSOM
 
-## BOM (Browser Object Model)
+### BOM (Browser Object Model)
 
 - BOM is the interface between JavaScript and the browser.
 - It allows JavaScript to interact with the **browser itself** — such as:
@@ -500,6 +499,16 @@ layout: two-cols
   - Tabs
   - URLs
   - Alerts
+  <style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: default
 
 ---
 
@@ -508,6 +517,17 @@ layout: two-cols
 - CSSOM is the interface between JavaScript and CSS.
 - It allows JavaScript to interact with and **manipulate CSS styles**.
 - It's how the browser represents **all the CSS** (from `<style>`, external files, or JavaScript) as an object model.
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: default
 
 ---
 
@@ -519,21 +539,119 @@ layout: two-cols
 - DOM is a **tree-like structure** converted from HTML tags.
 - These HTML elements are connected by **nodes** (element nodes, text nodes, etc.).
 
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: default
+
 ---
 
-## Documentation
+# The Nodes
+
+- The entire HTML document is the **document node**, which is the **root** of the DOM.
+- `<html>`, `<body>`, `<h1>`, and `<p>` are **element nodes**.
+- `"Hello!"` and `"this is a paragraph"` are **text nodes**.
+
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: two-cols
+
+---
+# Example of Nodes Explanation
+## Code 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+<body>
+    <h1 >Hello!</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+```
 
 ::right::
+## The nodes
+![Nodes image][nodes.PNG]
 
-## Code
-```js
-const final = {
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
 }
+</style>
+
+---
+transition: slide-up
+layout: default
+
+---
+
+# Changing the style the content of an html page
+## Code
+```html
+<h1 >Hello!</h1>
+    <script>
+        document.querySelector("h1").textContent = "New Heading!";
+        document.querySelector("h1").style.color = "red";
+    </script>
+    <p>This is a paragraph.</p>
+
 ```
 
 <style>
 .header-title {
-  color: #EF4444;
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: default
+
+---
+
+# Answer to the Assignment question
+```js
+// creating a div element
+
+const textDiv = document.createElement("div");
+
+// now let's create a paragragh in the div
+const textPara = document.createElement("p");
+
+// adding text
+textPara.textContent = "See you on the other side, where we will discuss events in JavaScript. May the force be with you.";
+textDiv.appendChild(textPara);
+
+document.body.appendChild(textDiv);
+textPara.style.fontFamily = 'Georgia', serif;
+textPara.style.fontStyle = "italic";
+```
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
 }
 </style>
 
@@ -562,3 +680,5 @@ class: text-center
 transition: fade-out
 layout: default
 ---
+
+
