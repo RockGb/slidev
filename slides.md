@@ -488,8 +488,6 @@ layout: default
 ---
 
 # Month 1 Week 4 {.header-title}
-
-<<<<<<< HEAD
 ## BOM, DOM, and CSSOM
 
 ### BOM (Browser Object Model)
