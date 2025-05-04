@@ -402,7 +402,7 @@ The code above shows the process using method POST and we get something called `
 
  
 Encryption and Decryption is used to store and reveal user ID using a form of token either cookies or local storage,session etc.
-Backend must have a documentation for the frontend to rely on by providing API’s to communicate with.They are the intermediary between frontend and the database.
+Backend must have a documentation for the frontends to rely on by providing API’s to communicate with.They are the intermediary between frontend and the database.
 There are several tools that can give us the same interface of API’s, example is the **Github API Docs**.They can be used to create repositories using tokens.
 
  # URLs
