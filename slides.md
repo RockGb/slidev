@@ -628,7 +628,6 @@ layout: default
         document.querySelector("h1").style.color = "red";
     </script>
     <p>This is a paragraph.</p>
-
 ```
 
 <style>
