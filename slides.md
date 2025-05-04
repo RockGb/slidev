@@ -398,7 +398,7 @@ const  result = await response.json ()
 transition: slide-up
 layout: full
 ---
-The code above shows the process using method POST and we get something called `headers` which is the ‘content-type’ called **AUTHORIZATION(BEARER)**.
+The code above shows the process using method POST and we get something called `headers` which is the ‘content-type’ called  **AUTHORIZATION(BEARER)**.
 
  
 Encryption and Decryption is used to store and reveal user ID using a form of token either cookies or local storage,session etc.
