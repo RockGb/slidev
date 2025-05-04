@@ -379,7 +379,7 @@ layout: default
  Basically means to send  the browser an information to get back another information.
  the browser cannot make a POST request as a first request inside a URL tab especially.
 
- A very good example of POST is when you fill a form or sign up by inputting your name,address,email and other data and submit,then you log in and it returns a feedback which indicates that your information has been received. i.e a token, which can further be sent to another API called USERS.Then the `Headers` must be parsed in using the token which is encrypted with the user’s details. This confirms that its the same user registered that is logged in.
+ A very good example of POST is when you fill a form or sign up by inputting your name,address,email and other data and submit,then you log in and it returns a feedback which indicates that your information has been received. i.e a token,which can further be sent to another API called USERS.Then the `Headers` must be parsed in using the token which is encrypted with the user’s details. This confirms that it's the same user registered that is logged in.
 
  ## Code 
 ```js
