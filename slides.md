@@ -175,7 +175,7 @@ layout: default
 
 ## 🔢 Arrays in Javascript {.header-title}
 
-An array is a data structure used to store multiple comma separated values. Arrays are declared using square brackets, []. 
+An array is a data structure used to store multiple comma separated values. Arrays are declared using square brackets,  `[]`. 
 
 *Example:*
 ```js
