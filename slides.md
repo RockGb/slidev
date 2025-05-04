@@ -488,9 +488,12 @@ layout: default
 ---
 
 # Month 1 Week 4 {.header-title}
+
 ## BOM, DOM, and CSSOM
+<br>
 
 ### BOM (Browser Object Model)
+<br>
 
 - BOM is the interface between JavaScript and the browser.
 - It allows JavaScript to interact with the **browser itself** — such as:
@@ -512,7 +515,7 @@ layout: default
 
 ---
 
-## CSSOM (CSS Object Model)
+# CSSOM (CSS Object Model)
 
 - CSSOM is the interface between JavaScript and CSS.
 - It allows JavaScript to interact with and **manipulate CSS styles**.
@@ -531,7 +534,7 @@ layout: default
 
 ---
 
-## DOM (Document Object Model)
+# DOM (Document Object Model)
 
 - DOM is the interface between JavaScript and **HTML + CSS**.
 - It represents the web page as an **object tree structure**.
@@ -572,15 +575,34 @@ layout: two-cols
 
 ---
 # Example of Nodes Explanation
+
 ## Code 
+<br>
 ```html
-<h1 >Hello!</h1>
-<p>This is a paragraph.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+<body>
+    <h1 >Hello!</h1>
+    <script>
+        document.querySelector("h1").textContent = "New Heading!";
+        document.querySelector("h1").style.color = "red";
+    </script>
+    <p>This is a paragraph.</p>
+    <script src="index.js"></script>
+    
+
+</body>
+</html>
 ```
 
 ::right::
 ## The nodes
-![Nodes image][nodes.PNG]
+![Nodes image](./images/nodes.PNG)
 
 <style>
 .header-title {
@@ -596,7 +618,9 @@ layout: default
 ---
 
 # Changing the style the content of an html page
+
 ## Code
+<br>
 ```html
 <h1 >Hello!</h1>
     <script>
