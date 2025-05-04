@@ -484,24 +484,187 @@ class Feature {
 
 ---
 transition: slide-left
-layout: two-cols
+layout: default
 ---
 
 # Month 1 Week 4 {.header-title}
 
-## Documentation
+## BOM, DOM, and CSSOM
+<br>
+
+### BOM (Browser Object Model)
+<br>
+
+- BOM is the interface between JavaScript and the browser.
+- It allows JavaScript to interact with the **browser itself** — such as:
+  - The window
+  - Tabs
+  - URLs
+  - Alerts
+
+ <style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: default
+
+---
+
+# CSSOM (CSS Object Model)
+
+- CSSOM is the interface between JavaScript and CSS.
+- It allows JavaScript to interact with and **manipulate CSS styles**.
+- It's how the browser represents **all the CSS** (from `<style>`, external files, or JavaScript) as an object model.
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: default
+
+---
+
+# DOM (Document Object Model)
+
+- DOM is the interface between JavaScript and **HTML + CSS**.
+- It represents the web page as an **object tree structure**.
+- JavaScript uses the DOM to read, access, and change elements on the page.
+- DOM is a **tree-like structure** converted from HTML tags.
+- These HTML elements are connected by **nodes** (element nodes, text nodes, etc.).
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: default
+
+---
+
+# The Nodes
+
+- The entire HTML document is the **document node**, which is the **root** of the DOM.
+- `<html>`, `<body>`, `<h1>`, and `<p>` are **element nodes**.
+- `"Hello!"` and `"this is a paragraph"` are **text nodes**.
+
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: two-cols
+
+---
+# Example of Nodes Explanation
+
+## Code 
+<br>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+<body>
+    <h1 >Hello!</h1>
+    <script>
+        document.querySelector("h1").textContent = "New Heading!";
+        document.querySelector("h1").style.color = "red";
+    </script>
+    <p>This is a paragraph.</p>
+    <script src="index.js"></script>
+    
+
+</body>
+</html>
+```
 
 ::right::
+## The nodes
+![Nodes image](./images/nodes.PNG)
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: default
+
+---
+
+# Changing the style the content of an html page
 
 ## Code
-```js
-const final = {
-}
+<br>
+```html
+<h1 >Hello!</h1>
+    <script>
+        document.querySelector("h1").textContent = "New Heading!";
+        document.querySelector("h1").style.color = "red";
+    </script>
+    <p>This is a paragraph.</p>
 ```
 
 <style>
 .header-title {
-  color: #EF4444;
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+transition: slide-up
+layout: default
+
+---
+
+# Answer to the Assignment question
+```js
+// creating a div element
+
+const textDiv = document.createElement("div");
+
+// now let's create a paragragh in the div
+const textPara = document.createElement("p");
+
+// adding text
+textPara.textContent = "See you on the other side, where we will discuss events in JavaScript. May the force be with you.";
+textDiv.appendChild(textPara);
+
+document.body.appendChild(textDiv);
+textPara.style.fontFamily = 'Georgia', serif;
+textPara.style.fontStyle = "italic";
+```
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
 }
 </style>
 
@@ -772,6 +935,9 @@ transition: fade-out
 layout: default
 ---
 
+<<<<<<< HEAD
+
+=======
 # Month 2 Week 1 {.header-title}
 
 ## Cont. of DOM in JavaScript (Selecting an Element by Its Unique Identifier (Id) and Styling It Within JavaScript)
@@ -824,3 +990,4 @@ h1Element.innerHTML = "Altschool FrontEnd Circle-5";
 h2Element.innerHTML =
   "Summary of what we have learnt since the beginning of 2nd semester.";
   ```
+>>>>>>> 36046ea0376e002b5fcf685e6e78431a228a4829
