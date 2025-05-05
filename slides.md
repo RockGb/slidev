@@ -29,7 +29,7 @@ mdc: true
 - **<span @click="goToSlide(2)">Table of Contents</span>**
 - **<span @click="goToSlide(3)">Month 1 Week 1</span>**
 - **<span @click="goToSlide(7)">Month 1 Week 2</span>**
-- **<span @click="goToSlide(10)">Month 1 Week 3</span>**
+- **<span @click="goToSlide(17)">Month 1 Week 3</span>**
 
 <script setup>
 const goToSlide = (index) => {
@@ -51,10 +51,6 @@ span:hover {
 }
 </style>
 
-
----
-transition: fade
-layout: default
 ---
 
 # Month 1 – Week 1 Recap {.header-title}
@@ -76,6 +72,11 @@ The Second Semester officially kicks off!
 
 **Goal:** Master JavaScript before moving on to React.  
  **Semester Expectation:** Build and deploy React applications successfully.
+
+<br>
+
+> **Goal:** Master JavaScript before moving on to React.  
+> **Semester Expectation:** Build and deploy React applications successfully.
 
 <style>
 .header-title {
@@ -127,8 +128,6 @@ console.log(sum); // Output: 8
 
 ## transition: slide-left
 
-# HEAD
-
 **Example:**
 
 ```js
@@ -139,7 +138,6 @@ function add(a, b) {
 let sum = add(3, 5);
 console.log(sum); // Output: 8
 ```
- _If return statement is omitted in a function, it returns undefined when called._
 
 **Example:**
 
@@ -156,10 +154,13 @@ console.log(result); // Output: undefined
 
 # There are several ways of creating functions in Javascript:<br>
 
+
 ---
- transition: slide-left
- layout: default
----
+
+## Ways of Declaring Functions {.header-title} <br>
+
+## transition: slide-left
+
 ## Ways of Declaring Functions {.header-title} <br>
 
 - **Function Declaration:** A named function is defined with the **'function'** keyword
@@ -265,6 +266,22 @@ let circleFiveMembers = [
   "Omogbolahan",
 ];
 console.log(circleFiveMembers[5]); // Output: OgheneO'Tega
+
+let circleFiveMembers = [
+  "Zoe",
+  "Deborah",
+  "Funmilola",
+  "Augustina",
+  "Angelina",
+  "OgheneO'Tega",
+  "Anthony",
+  "Blessing",
+  "Akanmu",
+  "Arnold",
+  "Kachi",
+  "Omogbolahan",
+];
+console.log(circleFiveMembers[5]); // Output: OgheneO'Tega
 ```
 
 <br>
@@ -281,9 +298,11 @@ _In Javascript, an array can contain different data types._
 </style>
 
 ---
+
+## HEAD
+
 transition: slide-up
 layout: default
----
 
 ## 📌 Rest Parameters and Spread Operators{.header-title}
 
@@ -427,9 +446,7 @@ document
 The function (callback) passed as a parameter to `addEventListener` will only be executed when the button is clicked.
 
 ---
-transition: slide-up
-layout: default
----
+
 # Month 1 Week 2 {.header-title}
 
 ## PROMISES
@@ -465,11 +482,6 @@ Contd on next page
 }
 </style>
 
-
-
----
-transition: fade-out
-layout: two-cols
 ---
 
 Sample syntax:
@@ -521,9 +533,6 @@ fetchData("https://api.example.com/success")
 </style>
 
 ---
-transition: fade-out
-layout: default
----
 
 ### Async / Await
 
@@ -555,10 +564,10 @@ getData().then((data) => {
 }
 </style>
 
+
+
+
 ---
-transition: slide-up
-layout: default
---- 
 
 # Month 1 Week 3 {.header-title}
 
@@ -586,14 +595,11 @@ layout: default
 </style>
 
 ---
-transition: fade-out
-layout: default
---- 
 
 # **GET**
+
 This is a single way to fetch information back to us.Example of the GET request is when you visit a browser.
 <img src="./images/pic.jpg"/>
-
 
 ---
 
@@ -618,9 +624,6 @@ const  result = await response.json ()
 
 ```
 
----
-transition: slide-up
-layout: full
 ---
 
 The code above shows the process using method POST and we get something called `headers` which is the ‘content-type’ called **AUTHORIZATION(BEARER)**.
@@ -671,9 +674,6 @@ console.log(newUrl.toString());
 ```
 
 ---
-transition: slide-left
-layout: default
----
 
 There are API's used to generate token and auntheticate ID's.We have **WEATHER API'S**,**JSONPLACEHOLDER**.
 There is an npm package called **JSONSERVER** used to create API'S when there is no API that meets
@@ -685,21 +685,35 @@ our needs by creating a fake data that looks like JSON.
 - IMPORT & EXPORT (Why do they exist?)
 - WHAT IS DOM?
 
+---
 
----
-transition: slide-left
-layout: default
----
+# Month 1 Week 4 {.header-title}
 
 ## Documentation
+
 ::right::
+
+## Code
+
+```js
+const final = {};
+```
+
+## </style>
+
+transition: slide-left
+layout: default
+
+---
 
 # Month 1 Week 4 {.header-title}
 
 ## BOM, DOM, and CSSOM
+
 <br>
 
 ### BOM (Browser Object Model)
+
 <br>
 
 - BOM is the interface between JavaScript and the browser.
@@ -731,9 +745,8 @@ layout: default
 }
 </style>
 
----
-transition: slide-up
-layout: default
+
+
 ---
 
 # DOM (Document Object Model)
@@ -752,10 +765,6 @@ layout: default
 </style>
 
 ---
-transition: slide-up
-layout: default
----
-
 
 # The Nodes
 
@@ -770,15 +779,12 @@ layout: default
 }
 </style>
 
-
----
-transition: slide-up
-layout: two-cols
 ---
 
 # Example of Nodes Explanation
 
 ## Code
+
 <br>
 ```html
 <!DOCTYPE html>
@@ -796,7 +802,6 @@ layout: two-cols
     </script>
     <p>This is a paragraph.</p>
     <script src="index.js"></script>
-
 
 </body>
 </html>
@@ -816,16 +821,12 @@ layout: two-cols
 </style>
 
 ---
-transition: fade
-layout: center
-class: text-center
----
+
 # Changing the style the content of an html page
 
 ## Code
 
 <br>
-
 ```html
 <h1 >Hello!</h1>
     <script>
@@ -837,13 +838,12 @@ class: text-center
 
 <style>
 .header-title {
+
   color: #EF4444;
 }
 </style>
 
----
-transition: slide-up
-layout: default
+
 ---
 
 # Answer to the Assignment question
@@ -873,12 +873,12 @@ textPara.style.fontStyle = "italic";
 }
 </style>
 
+
 ---
 transition: fade
 layout: center
 class: text-center
 ---
-
 # JavaScript Modules and Related Concepts
 
 ### WEEK 1 - EXTRA CLASS
@@ -919,8 +919,7 @@ export function subtract(a, b) {
 <br>
 
 ```javascript
-// app.js (ma
-// in file)
+// app.js (main file)
 import { add, subtract } from "./math.js";
 ```
 
@@ -933,8 +932,7 @@ import { add, subtract } from "./math.js";
 ## 2. Bundlers
 
 <!-- Add click animations to list items -->
-
-<v-clicks>
+ <v-clicks>
 
 **Popular bundlers:**
 
@@ -944,6 +942,8 @@ import { add, subtract } from "./math.js";
 
 - Vite
 
+- Rollup
+- Vite
 - Parcel
 
 </v-clicks>
@@ -1191,10 +1191,11 @@ h2Element.innerHTML =
 ```
 
 ---
+transition: fade-out
+layout: default
+---
 
 # Thank You! {.thank-you}
-
-
 ## Questions & Discussion
 
 <style>
@@ -1207,5 +1208,4 @@ h2Element.innerHTML =
   font-size: 3em;
 }
 </style>
-
 
