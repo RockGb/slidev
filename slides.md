@@ -29,7 +29,7 @@ mdc: true
 - **<span @click="goToSlide(2)">Table of Contents</span>**
 - **<span @click="goToSlide(3)">Month 1 Week 1</span>**
 - **<span @click="goToSlide(7)">Month 1 Week 2</span>**
-- **<span @click="goToSlide(10)">Month 1 Week 3</span>**
+- **<span @click="goToSlide(17)">Month 1 Week 3</span>**
 
 <script setup>
 const goToSlide = (index) => {
@@ -53,11 +53,6 @@ span:hover {
 
 ---
 
-transition: fade
-layout: default
-
----
-
 # Month 1 – Week 1 Recap {.header-title}
 
 The Second Semester officially kicks off!
@@ -66,15 +61,17 @@ The Second Semester officially kicks off!
 
 <br>
 
-<<<<<<< HEAD
-
 - **Learning How to Learn** – Coursera
 - **The Front End Developer/Engineer Handbook** – Frontend Masters
 - # **Refactoring UI** by Adam Wathan.
 - [**Learning How to Learn**](https://www.coursera.org/learn/learning-how-to-learn) – Coursera
 - [**The Front End Developer/Engineer Handbook**](https://frontendmasters.com/guides/front-end-handbook/2024/) – Frontend Masters
 - [**Refactoring UI**](https://refactoringui.com/) by Adam Wathan.
-  > > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
+
+<br>
+
+**Goal:** Master JavaScript before moving on to React.  
+ **Semester Expectation:** Build and deploy React applications successfully.
 
 <br>
 
@@ -109,7 +106,6 @@ function functionName() {
 
 _The return value can be a variable, array, object, string, number, boolean or even a function._
 
-<<<<<<< HEAD
 **Example:**
 
 ```js
@@ -120,10 +116,6 @@ function add(a, b) {
 let sum = add(3, 5);
 console.log(sum); // Output: 8
 ```
-
-=======
-
-> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
 
 <style>
 .header-title {
@@ -136,8 +128,6 @@ console.log(sum); // Output: 8
 
 ## transition: slide-left
 
-# <<<<<<< HEAD
-
 **Example:**
 
 ```js
@@ -148,9 +138,6 @@ function add(a, b) {
 let sum = add(3, 5);
 console.log(sum); // Output: 8
 ```
-
-> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
-> > > > > > > _If return statement is omitted in a function, it returns undefined when called._
 
 **Example:**
 
@@ -163,19 +150,18 @@ let result = greet("Zoe");
 console.log(result); // Output: undefined
 ```
 
-<<<<<<< HEAD
-
 ## Ways of Declaring Functions {.header-title}
 
 # There are several ways of creating functions in Javascript:<br>
 
+
 ---
+
+## Ways of Declaring Functions {.header-title} <br>
 
 ## transition: slide-left
 
 ## Ways of Declaring Functions {.header-title} <br>
-
-> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
 
 - **Function Declaration:** A named function is defined with the **'function'** keyword
 
@@ -185,13 +171,11 @@ function getUsername(user) {
 }
 ```
 
-<<<<<<< HEAD
 <br>
 
 # -**Function Expression:** A function assigned to a variable
 
 - **Function Expression:** A function assigned to a variable
-  > > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
 
 ```js
 const getUsername = function (user) {
@@ -199,15 +183,11 @@ const getUsername = function (user) {
 };
 ```
 
-<<<<<<< HEAD
-
 <style>
 .header-title {
   color: #3B82F6;
 }
 </style>
-
-=======
 
 - **Arrow Function:** A concise way of writing function expression syntax, introduced in ES6
 
@@ -223,16 +203,7 @@ const getUsername = (user) => {
 const getUsername = (user) => user.username;
 ```
 
-> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
-
 ---
-
-transition: fade
-layout: default
-
----
-
-<<<<<<< HEAD
 
 - **Arrow Function:** A concise way of writing function expression syntax, introduced in ES6.
 
@@ -260,8 +231,6 @@ const getUsername = (user) => user.username;
 
 An array is a data structure used to store multiple comma separated values. Arrays are declared using square brackets, `[]`.
 
-> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
-
 _Example:_
 
 ```js
@@ -269,12 +238,50 @@ let arr = [1, 2, 3];
 ```
 
 ```js
-<<<<<<< HEAD
-let circleFiveMembers = ["Zoe", "Deborah", "Funmilola", "Augustina", "Angelina", "OgheneO'Tega", "Anthony", "Blessing", "Akanmu", "Arnold", "Kachi"]
-=======
-let circleFiveMembers = ["Zoe", "Deborah", "Funmilola", "Augustina", "Angelina", "OgheneO'Tega", "Anthony", "Blessing", "Akanmu", "Arnold", "Kachi", "Omogbolahan"]
->>>>>>> dd8b661084961690b9a3c1fd25bd253d970b63e7
-console.log(circleFiveMembers[5]) // Output: OgheneO'Tega
+let circleFiveMembers = [
+  "Zoe",
+  "Deborah",
+  "Funmilola",
+  "Augustina",
+  "Angelina",
+  "OgheneO'Tega",
+  "Anthony",
+  "Blessing",
+  "Akanmu",
+  "Arnold",
+  "Kachi",
+];
+let circleFiveMembers = [
+  "Zoe",
+  "Deborah",
+  "Funmilola",
+  "Augustina",
+  "Angelina",
+  "OgheneO'Tega",
+  "Anthony",
+  "Blessing",
+  "Akanmu",
+  "Arnold",
+  "Kachi",
+  "Omogbolahan",
+];
+console.log(circleFiveMembers[5]); // Output: OgheneO'Tega
+
+let circleFiveMembers = [
+  "Zoe",
+  "Deborah",
+  "Funmilola",
+  "Augustina",
+  "Angelina",
+  "OgheneO'Tega",
+  "Anthony",
+  "Blessing",
+  "Akanmu",
+  "Arnold",
+  "Kachi",
+  "Omogbolahan",
+];
+console.log(circleFiveMembers[5]); // Output: OgheneO'Tega
 ```
 
 <br>
@@ -440,11 +447,6 @@ The function (callback) passed as a parameter to `addEventListener` will only be
 
 ---
 
-transition: slide-up
-layout: default
-
----
-
 # Month 1 Week 2 {.header-title}
 
 ## PROMISES
@@ -479,11 +481,6 @@ Contd on next page
   color: #10B981;
 }
 </style>
-
----
-
-transition: fade-out
-layout: two-cols
 
 ---
 
@@ -537,11 +534,6 @@ fetchData("https://api.example.com/success")
 
 ---
 
-transition: fade-out
-layout: default
-
----
-
 ### Async / Await
 
 It is a Modern way to write Promises
@@ -572,16 +564,12 @@ getData().then((data) => {
 }
 </style>
 
----
 
-transition: slide-up
-layout: default
+
 
 ---
 
 # Month 1 Week 3 {.header-title}
-
-<<<<<<< HEAD
 
 ## API’S AND ITS FUNCTION
 
@@ -594,27 +582,12 @@ layout: default
 - **FETCH**is used to make API’S calls.Making API’s calls is like you are talking to a particular backend/ endpoint.
 - **XMLHttpRequest** can also be used to make API calls
 - API’s are also used to submit forms.
-- # There are different ways to talk to the API’s which are : **GET**, **POST**.
-
-## Text
-
-- 1
-- 2
-- 3
-
-### Code Example
-
-```js
-class Feature {}
-```
-
-> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
+- There are different ways to talk to the API’s which are : **GET**, **POST**.
 
 <style>
 .header-title {
   color: #F59E0B;
 }
-<<<<<<< HEAD
 
 .hhh{
     color:green;
@@ -623,22 +596,14 @@ class Feature {}
 
 ---
 
-## transition: slide-left
-
-**GET**
+# **GET**
 
 This is a single way to fetch information back to us.Example of the GET request is when you visit a browser.
-
-  <img src="./images/pic.jpg"/>
-
----
-
-transition: fade-out
-layout: default
+<img src="./images/pic.jpg"/>
 
 ---
 
-**POST**
+# **POST**
 
 Basically means to send the browser an information to get back another information.
 the browser cannot make a POST request as a first request inside a URL tab especially.
@@ -658,11 +623,6 @@ body : JSON.stringify (user) ,
 const  result = await response.json ()
 
 ```
-
----
-
-transition: slide-up
-layout: full
 
 ---
 
@@ -735,23 +695,25 @@ our needs by creating a fake data that looks like JSON.
 
 ## Code
 
-````js
-const final = {
-}
-=======
-</style>
+```js
+const final = {};
+```
 
----
+## </style>
+
 transition: slide-left
 layout: default
+
 ---
 
 # Month 1 Week 4 {.header-title}
 
 ## BOM, DOM, and CSSOM
+
 <br>
 
 ### BOM (Browser Object Model)
+
 <br>
 
 - BOM is the interface between JavaScript and the browser.
@@ -769,10 +731,6 @@ layout: default
 </style>
 
 ---
-transition: slide-up
-layout: default
-
----
 
 # CSSOM (CSS Object Model)
 
@@ -787,9 +745,7 @@ layout: default
 }
 </style>
 
----
-transition: slide-up
-layout: default
+
 
 ---
 
@@ -809,17 +765,12 @@ layout: default
 </style>
 
 ---
-transition: slide-up
-layout: default
-
----
 
 # The Nodes
 
 - The entire HTML document is the **document node**, which is the **root** of the DOM.
 - `<html>`, `<body>`, `<h1>`, and `<p>` are **element nodes**.
 - `"Hello!"` and `"this is a paragraph"` are **text nodes**.
-
 
 <style>
 .header-title {
@@ -829,13 +780,11 @@ layout: default
 </style>
 
 ---
-transition: slide-up
-layout: two-cols
 
----
 # Example of Nodes Explanation
 
 ## Code
+
 <br>
 ```html
 <!DOCTYPE html>
@@ -854,10 +803,9 @@ layout: two-cols
     <p>This is a paragraph.</p>
     <script src="index.js"></script>
 
-
 </body>
 </html>
-````
+```
 
 ::right::
 
@@ -874,11 +822,6 @@ layout: two-cols
 
 ---
 
-transition: slide-up
-layout: default
-
----
-
 # Changing the style the content of an html page
 
 ## Code
@@ -891,34 +834,15 @@ layout: default
         document.querySelector("h1").style.color = "red";
     </script>
     <p>This is a paragraph.</p>
->>>>>>> dd8b661084961690b9a3c1fd25bd253d970b63e7
 ```
 
 <style>
 .header-title {
-<<<<<<< HEAD
+
   color: #EF4444;
 }
 </style>
 
-transition: fade
-layout: center
-class: text-center
-
----
-
-# Thank You! {.thank-you}
-
-=======
-color: #3B82F6;
-font-size: 2.5em;
-}
-</style>
-
----
-
-transition: slide-up
-layout: default
 
 ---
 
@@ -949,14 +873,12 @@ textPara.style.fontStyle = "italic";
 }
 </style>
 
----
 
+---
 transition: fade
 layout: center
 class: text-center
-
 ---
-
 # JavaScript Modules and Related Concepts
 
 ### WEEK 1 - EXTRA CLASS
@@ -1010,11 +932,16 @@ import { add, subtract } from "./math.js";
 ## 2. Bundlers
 
 <!-- Add click animations to list items -->
-<v-clicks>
+ <v-clicks>
 
 **Popular bundlers:**
 
 - Webpack
+
+- Rollup
+
+- Vite
+
 - Rollup
 - Vite
 - Parcel
@@ -1239,7 +1166,7 @@ The selected elements can be styled as preferred within the JavaScript code.
 ```
 
 <br>
-### Example of Selecting an Element by Its Unique Identifier (Id) Using `querySelector` and `getElementById`, and Styling the Selected Elements...
+Example of Selecting an Element by Its Unique Identifier (Id) Using `querySelector` and `getElementById`, and Styling the Selected Elements...
 
 ---
 
@@ -1264,11 +1191,11 @@ h2Element.innerHTML =
 ```
 
 ---
+transition: fade-out
+layout: default
+---
 
 # Thank You! {.thank-you}
-
-> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
-
 ## Questions & Discussion
 
 <style>
@@ -1282,13 +1209,3 @@ h2Element.innerHTML =
 }
 </style>
 
-## <<<<<<< HEAD
-
-transition: fade-out
-layout: default
-
----
-
-## =======
-
-> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
