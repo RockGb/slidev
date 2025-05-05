@@ -343,6 +343,9 @@ layout: default
 # Month 1 Week 2 {.header-title}
 
 ## PROMISES
+
+A promise is an object that represents a future result of an asynchronous operation. It has 3 states.  They are :
+
 1. Pending - initial state
 2. Fulfilled - successful completion
 3. Rejected - Operation Failed

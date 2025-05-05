@@ -6,3 +6,4 @@ dist
 .remote-assets
 pnpm-lock.yaml
 components.d.ts
+pnpm-lock.yaml
