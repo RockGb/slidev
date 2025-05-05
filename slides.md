@@ -383,7 +383,7 @@ layout: default
 
  ## Code 
 ```js
-Const response = await fetch (‘/api/users’ {
+Const response = await fetch (‘/api/users’ {git checkout 
     method : ‘POST’,
 headers : {
  ‘content-Type’ : ‘application/json’,
