@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1744&auto=format&fit=crop'
+background: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1744&auto=format&fit=crop"
 # some information about your slides (markdown enabled)
 title: AltSchool Frontend Circle 5
 info: |
@@ -52,8 +52,10 @@ span:hover {
 </style>
 
 ---
+
 transition: fade
 layout: default
+
 ---
 
 # Month 1 – Week 1 Recap {.header-title}
@@ -61,15 +63,20 @@ layout: default
 The Second Semester officially kicks off!
 
 ## 📚 Recommended Resources {.header-title}
+
 <br>
 
-- [**Learning How to Learn**](https://www.coursera.org/learn/learning-how-to-learn) – Coursera  
-- [**The Front End Developer/Engineer Handbook**](https://frontendmasters.com/guides/front-end-handbook/2024/) – Frontend Masters  
+<<<<<<< HEAD
+
+- **Learning How to Learn** – Coursera
+- **The Front End Developer/Engineer Handbook** – Frontend Masters
+- # **Refactoring UI** by Adam Wathan.
+- [**Learning How to Learn**](https://www.coursera.org/learn/learning-how-to-learn) – Coursera
+- [**The Front End Developer/Engineer Handbook**](https://frontendmasters.com/guides/front-end-handbook/2024/) – Frontend Masters
 - [**Refactoring UI**](https://refactoringui.com/) by Adam Wathan.
-
+  > > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
 
 <br>
-
 
 > **Goal:** Master JavaScript before moving on to React.  
 > **Semester Expectation:** Build and deploy React applications successfully.
@@ -80,37 +87,31 @@ The Second Semester officially kicks off!
   font-size: 2.5em;
 }
 </style>
+
 ---
 
 ANSWERS TO QUESTIONS (CONCERNS) {.header-title}
 
 ## ⚙️ Return Statement in JavaScript {.header-title}
 
-The `return` statement  
+The `return` statement
+
 - The return statement ends function execution and specifies a value to be called to the function caller.
 - The last line in a function must be a return statement.
 
 **Syntax:**
+
 ```js
 function functionName() {
   return value;
 }
 ```
 
-*The return value can be a variable, array, object, string, number, boolean or even a function.*
+_The return value can be a variable, array, object, string, number, boolean or even a function._
 
-
-
-<style>
-.header-title {
-  color: #3B82F6;
-  font-size: 2.5em;
-}
-</style>
----
-transition: slide-left
----
+<<<<<<< HEAD
 **Example:**
+
 ```js
 function add(a, b) {
   return a + b;
@@ -118,81 +119,11 @@ function add(a, b) {
 
 let sum = add(3, 5);
 console.log(sum); // Output: 8
-
 ```
 
-*If return statement is omitted in a function, it returns undefined when called.*
+=======
 
-**Example:**
-```js
-function greet(name) {
-console.log("Hello, " + name + "!");
-}
-
-let result = greet("Zoe");
-console.log(result); // Output: undefined
-```
----
-transition: slide-left
-
----
-
-## Ways of Declaring Functions {.header-title} <br>
-
-- **Function Declaration:** A named function is defined with the **'function'** keyword 
-```js
-function getUsername(user) {
-  return user.username;
-}
-```
-
-- **Function Expression:** A function assigned to a variable
-```js
-const getUsername = function(user) {
-  return user.username;
-};
-```
-
-- **Arrow Function:** A concise way of writing function expression syntax, introduced in ES6
-```js
-const getUsername = (user) => {
-  return user.username;
-};
-```
-
-- **One Line Arrow Function(Implicit Return):** Function written on a single line, has implicit return statement.
-```js
-const getUsername = user => user.username; 
-```
-
----
-transition: fade
-layout: default
----
-
-
-<br>
-
-## 🔢 Arrays in Javascript {.header-title}
-
-An array is a data structure used to store multiple comma separated values. Arrays are declared using square brackets,  `[]`. 
-
-*Example:*
-```js
-let arr = [1, 2, 3]
-```
-
-```js
-let circleFiveMembers = ["Zoe", "Deborah", "Funmilola", "Augustina", "Angelina", "OgheneO'Tega", "Anthony", "Blessing", "Akanmu", "Arnold", "Kachi", "Omogbolahan"]
-console.log(circleFiveMembers[5]) // Output: OgheneO'Tega
-```
-<br>
-
-*In Javascript, an array can contain different data types.*
-
-**There are several array methods: push(), pop(), shift(), unshift(), map(), filter(), reduce(), sort(), reverse(), slice(), splice().**
-
-
+> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
 
 <style>
 .header-title {
@@ -203,32 +134,195 @@ console.log(circleFiveMembers[5]) // Output: OgheneO'Tega
 
 ---
 
-## 📌 Rest Parameters and Spread Operators{.header-title} 
+## transition: slide-left
 
-Rest Parameters represents a concept which allows a function to accept any number of arguments and store in an array. Rest Parameters are used in functions with unknown number of arguments.
+# <<<<<<< HEAD
 
-Syntax:
+**Example:**
 
- `function myFunction (...args)`
-
-Example:
 ```js
-// function to sum up multiple numbers
-function sum(...nums) {
-    return nums.reduce((a, b) => a + b, 0);
+function add(a, b) {
+  return a + b;
 }
 
-console.log(sum(1, 2, 3)) // Expected Output: 6
+let sum = add(3, 5);
+console.log(sum); // Output: 8
 ```
 
+> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
+> > > > > > > _If return statement is omitted in a function, it returns undefined when called._
 
-*It is important to note that only one rest parameter is allowed in a function definition and it must be the last parameter in a function's parameter list.*
+**Example:**
+
+```js
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+let result = greet("Zoe");
+console.log(result); // Output: undefined
+```
+
+<<<<<<< HEAD
+
+## Ways of Declaring Functions {.header-title}
+
+# There are several ways of creating functions in Javascript:<br>
+
+---
+
+## transition: slide-left
+
+## Ways of Declaring Functions {.header-title} <br>
+
+> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
+
+- **Function Declaration:** A named function is defined with the **'function'** keyword
+
+```js
+function getUsername(user) {
+  return user.username;
+}
+```
+
+<<<<<<< HEAD
+<br>
+
+# -**Function Expression:** A function assigned to a variable
+
+- **Function Expression:** A function assigned to a variable
+  > > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
+
+```js
+const getUsername = function (user) {
+  return user.username;
+};
+```
+
+<<<<<<< HEAD
+
+<style>
+.header-title {
+  color: #3B82F6;
+}
+</style>
+
+=======
+
+- **Arrow Function:** A concise way of writing function expression syntax, introduced in ES6
+
+```js
+const getUsername = (user) => {
+  return user.username;
+};
+```
+
+- **One Line Arrow Function(Implicit Return):** Function written on a single line, has implicit return statement.
+
+```js
+const getUsername = (user) => user.username;
+```
+
+> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
+
+---
+
+transition: fade
+layout: default
+
+---
+
+<<<<<<< HEAD
+
+- **Arrow Function:** A concise way of writing function expression syntax, introduced in ES6.
+
+```js
+const getUsername = (user) => {
+  return user.username;
+};
+```
+
+- **One Line Arrow Function (Implicit Return):** Function written on a single line, has implicit return statement.
+
+```js
+const getUsername = (user) => user.username;
+```
+
+<br>
+
+## Arrays in Javascript {.header-title}
+
+# An array is a data structure used to store multiple comma separated values. Arrays are declared using square brackets, [].
+
+<br>
+
+## 🔢 Arrays in Javascript {.header-title}
+
+An array is a data structure used to store multiple comma separated values. Arrays are declared using square brackets, `[]`.
+
+> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
+
+_Example:_
+
+```js
+let arr = [1, 2, 3];
+```
+
+```js
+<<<<<<< HEAD
+let circleFiveMembers = ["Zoe", "Deborah", "Funmilola", "Augustina", "Angelina", "OgheneO'Tega", "Anthony", "Blessing", "Akanmu", "Arnold", "Kachi"]
+=======
+let circleFiveMembers = ["Zoe", "Deborah", "Funmilola", "Augustina", "Angelina", "OgheneO'Tega", "Anthony", "Blessing", "Akanmu", "Arnold", "Kachi", "Omogbolahan"]
+>>>>>>> dd8b661084961690b9a3c1fd25bd253d970b63e7
+console.log(circleFiveMembers[5]) // Output: OgheneO'Tega
+```
+
+<br>
+
+_In Javascript, an array can contain different data types._
+
+**There are several array methods: push(), pop(), shift(), unshift(), map(), filter(), reduce(), sort(), reverse(), slice(), splice().**
 
 <style>
 .header-title {
   color: #3B82F6;
   font-size: 2.5em;
 }
+</style>
+
+---
+
+## HEAD
+
+transition: slide-up
+layout: default
+
+## 📌 Rest Parameters and Spread Operators{.header-title}
+
+Rest Parameters represents a concept which allows a function to accept any number of arguments and store in an array. Rest Parameters are used in functions with unknown number of arguments.
+
+Syntax:
+
+`function myFunction (...args)`
+
+Example:
+
+```js
+// function to sum up multiple numbers
+function sum(...nums) {
+  return nums.reduce((a, b) => a + b, 0);
+}
+
+console.log(sum(1, 2, 3)); // Expected Output: 6
+```
+
+_It is important to note that only one rest parameter is allowed in a function definition and it must be the last parameter in a function's parameter list._
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+   }
 </style>
 
 ---
@@ -241,10 +335,11 @@ Spread Operator (`...`) expands an iterable like an array or string into more el
 const arr = [1, 2, 3];
 // Using for of loop
 for (const item of arr) {
-    console.log(item);
+  console.log(item);
 }
 // Output: 1 2 3
-``` 
+```
+
 <br>
 
 ### Spread operator can be used to copy (clone) arrays
@@ -252,11 +347,13 @@ for (const item of arr) {
 ```js
 let arr = [1, 2, 3];
 let newArr = [...arr];
-console.log(newArr) // Output: 1, 2, 3
+console.log(newArr); // Output: 1, 2, 3
 ```
+
 ---
 
 ### Spread operator can be used to merge arrays
+
 <br>
 ```js
 let girls = ["Jane", "Rose", "Blessing"];
@@ -267,11 +364,12 @@ console.log(allStudents); // [ "Jane", "Rose", "Blessing", "John", "David", "Sam
 <br>
 
 ### Spread operator can be used to add elements to an array
+
 <br>
 
 ```js
 const numbers = [1, 2, 3];
-const newNumbers = [...numbers, 4]
+const newNumbers = [...numbers, 4];
 console.log(newNumbers); // [1, 2, 3, 4]
 ```
 
@@ -279,25 +377,27 @@ Spread operator can also be used with objects.
 
 ---
 
-## 🔁 Callback Functions{.header-title} 
+## 🔁 Callback Functions{.header-title}
 
 "I will call you back later!"
 
 A callback is a function passed as an argument to another function and gets executed after the completion of a specific task or when an event occurs.
 
 Example
+
 ```js
 function handleCookies(message, acceptFn, rejectFn) {
-    let result = confirm(message);
-    // If user clicks 'OK'
-    if(result) acceptFn();
-    // If user clicks 'Cancel'
-    else rejectFn();
+  let result = confirm(message);
+  // If user clicks 'OK'
+  if (result) acceptFn();
+  // If user clicks 'Cancel'
+  else rejectFn();
 }
 
-handleCookies('Do you accept cookies on this site?', 
-    () => console.log('Cookies accepted'), 
-    () => console.log('Cookies rejected')
+handleCookies(
+  "Do you accept cookies on this site?",
+  () => console.log("Cookies accepted"),
+  () => console.log("Cookies rejected")
 );
 ```
 
@@ -315,9 +415,10 @@ handleCookies('Do you accept cookies on this site?',
 Callbacks are mostly used in asynchronous operations (tasks running independently)
 
 Example using `setTimeout` function
+
 ```js
 function showMessage() {
-    console.log("Hello after 3 seconds!");
+  console.log("Hello after 3 seconds!");
 }
 
 setTimeout(showMessage, 3000);
@@ -325,16 +426,20 @@ setTimeout(showMessage, 3000);
 
 `setTimeout` is a built-in asynchronous function in Javascript and it takes in two parameters - a callback function and a delay.
 
-*Note if `showMessage()` is added the function will be executed immediately and return undefined.*
+_Note if `showMessage()` is added the function will be executed immediately and return undefined._
 
 Callbacks are also used in event listeners
+
 ```js
-document.getElementById('myBtn').addEventListener("click", () => console.log("Button clicked!"))
+document
+  .getElementById("myBtn")
+  .addEventListener("click", () => console.log("Button clicked!"));
 ```
 
 The function (callback) passed as a parameter to `addEventListener` will only be executed when the button is clicked.
 
 ---
+
 transition: slide-up
 layout: default
 
@@ -343,29 +448,31 @@ layout: default
 # Month 1 Week 2 {.header-title}
 
 ## PROMISES
+
 1. Pending - initial state
 2. Fulfilled - successful completion
 3. Rejected - Operation Failed
-<br>
+   <br>
 
 ### How to create a promise?
-Simply: 
-```js
-newPromise()
 
+Simply:
+
+```js
+newPromise();
 ```
+
 <br>
 
 **A promise will take the function for the fulfilled and the rejected :**
+
 ```js
-newPromise(resolve, reject)
+newPromise(resolve, reject);
 ```
 
 <br>
 
 Contd on next page
-
-
 
 <style>
 .header-title {
@@ -374,9 +481,12 @@ Contd on next page
 </style>
 
 ---
+
 transition: fade-out
 layout: two-cols
+
 ---
+
 Sample syntax:
 
 ```js
@@ -388,34 +498,35 @@ reject(error); // promise is rejected with error
 }
 });
 ```
+
 <br>
 
 ::right::
 
 Sample Code:
+
 ```js
 function fetchData(url) {
   return new Promise((resolve, reject) => {
     // Simulating network request
     setTimeout(() => {
-      if (url.includes('success')) {
-        resolve({ data: 'Here is your data', status: 200 });
+      if (url.includes("success")) {
+        resolve({ data: "Here is your data", status: 200 });
       } else {
-        reject({ error: 'Failed to fetch data', status: 404 });
+        reject({ error: "Failed to fetch data", status: 404 });
       }
     }, 2000);
   });
 }
 
 // Using the promise
-fetchData('https://api.example.com/success')
-  .then(response => {
-    console.log('Success:', response.data);
+fetchData("https://api.example.com/success")
+  .then((response) => {
+    console.log("Success:", response.data);
   })
-  .catch(error => {
-    console.log('Error:', error.error);
+  .catch((error) => {
+    console.log("Error:", error.error);
   });
-
 ```
 
 <style>
@@ -425,11 +536,14 @@ fetchData('https://api.example.com/success')
 </style>
 
 ---
+
 transition: fade-out
 layout: default
+
 ---
 
 ### Async / Await
+
 It is a Modern way to write Promises
 
 **Note** : Putting 'async' in front of a function automatically makes it a **Promise**.
@@ -437,18 +551,18 @@ It is a Modern way to write Promises
 ```js
 async function getData() {
   try {
-    const response = await fetchData('https://api.example.com/success');
-    console.log('Data:', response.data);
+    const response = await fetchData("https://api.example.com/success");
+    console.log("Data:", response.data);
     return response;
   } catch (error) {
-    console.error('Error:', error);
+    console.error("Error:", error);
     throw error;
   }
 }
 
 // Call the async function
-getData().then(data => {
-  console.log('Processing data further');
+getData().then((data) => {
+  console.log("Processing data further");
 });
 ```
 
@@ -459,27 +573,172 @@ getData().then(data => {
 </style>
 
 ---
+
 transition: slide-up
 layout: default
+
 ---
 
 # Month 1 Week 3 {.header-title}
 
+<<<<<<< HEAD
+
+## API’S AND ITS FUNCTION
+
+### SUMMARY: { .hhh }
+
+- The primary responsibility of a front end developer is to create pixel perfect UI and also
+  to make the UI functional and usable.
+- API’s are endpoints to Github.There is always a documentation on every API.
+- You can make use of Github API to create a repository,and also use it to comment
+- **FETCH**is used to make API’S calls.Making API’s calls is like you are talking to a particular backend/ endpoint.
+- **XMLHttpRequest** can also be used to make API calls
+- API’s are also used to submit forms.
+- # There are different ways to talk to the API’s which are : **GET**, **POST**.
+
 ## Text
--  1
--  2
--  3
+
+- 1
+- 2
+- 3
 
 ### Code Example
+
 ```js
-class Feature {
-}
+class Feature {}
 ```
+
+> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
 
 <style>
 .header-title {
   color: #F59E0B;
 }
+<<<<<<< HEAD
+
+.hhh{
+    color:green;
+  }
+</style>
+
+---
+
+## transition: slide-left
+
+**GET**
+
+This is a single way to fetch information back to us.Example of the GET request is when you visit a browser.
+
+  <img src="./images/pic.jpg"/>
+
+---
+
+transition: fade-out
+layout: default
+
+---
+
+**POST**
+
+Basically means to send the browser an information to get back another information.
+the browser cannot make a POST request as a first request inside a URL tab especially.
+
+A very good example of POST is when you fill a form or sign up by inputting your name,address,email and other data and submit,then you log in and it returns a feedback which indicates that your information has been received. i.e a token,which can further be sent to another API called USERS.Then the `Headers` must be parsed in using the token which is encrypted with the user’s details. This confirms that it's the same user registered that is logged in.
+
+## Code
+
+```js
+Const response = await fetch (‘/api/users’ {git checkout
+    method : ‘POST’,
+headers : {
+ ‘content-Type’ : ‘application/json’,
+  }
+body : JSON.stringify (user) ,
+  })
+const  result = await response.json ()
+
+```
+
+---
+
+transition: slide-up
+layout: full
+
+---
+
+The code above shows the process using method POST and we get something called `headers` which is the ‘content-type’ called **AUTHORIZATION(BEARER)**.
+
+Encryption and Decryption is used to store and reveal user ID using a form of token either cookies or local storage,session etc.
+Backend must have a documentation for the frontends to rely on by providing API’s to communicate with.They are the intermediary between frontend and the database.
+There are several tools that can give us the same interface of API’s, example is the **Github API Docs**.They can be used to create repositories using tokens.
+
+# URLs
+
+Javascript provides a built in URL class that makes working with URL easier and safer.The URL object provides a convenient method to parse in URLs.
+
+<style>
+.header-title {
+  color: #10B981;
+}
+</style>
+
+---
+
+## Code
+
+```js
+const url = new URL("https://example.com/products?id=123&category=books");
+
+console.log(url.href); // "Full URL: "https://example.com/products?id=123&category=books"
+console.log(url.origin); // "https://example.com"
+console.log(url.protocol); // "https:"
+console.log(url.hostname); // "example.com"
+console.log(url.pathname); // "/products"
+console.log(url.search); // "?id=123&category=books"
+console.log(url.hash); // "" (empty if not present)
+console.log(url.searchParams.get("id")); // "123"
+console.log(url.searchParams.get("category")); // "books"
+
+url.searchParams.set("category", "fiction"); // Update parameter
+url.searchParams.append("sort", "price"); // Add new parameter
+url.searchParams.delete("id"); // Remove a parameter
+
+console.log(url.toString()); // New URL after changes
+
+const newUrl = new URL("https://example.com/page");
+newUrl.searchParams.set("user", "alice");
+newUrl.searchParams.set("mode", "edit");
+
+console.log(newUrl.toString());
+// Output: "https://example.com/page?user=alice&mode=edit"
+```
+
+---
+
+There are API's used to generate token and auntheticate ID's.We have **WEATHER API'S**,**JSONPLACEHOLDER**.
+There is an npm package called **JSONSERVER** used to create API'S when there is no API that meets
+our needs by creating a fake data that looks like JSON.
+
+# TOPICS
+
+- MODULES & JAVASCRIPT IN THE BROWSER(DOM)
+- IMPORT & EXPORT (Why do they exist?)
+- WHAT IS DOM?
+
+---
+
+# Month 1 Week 4 {.header-title}
+
+## Documentation
+
+::right::
+
+## Code
+
+````js
+const final = {
+}
+=======
 </style>
 
 ---
@@ -576,7 +835,7 @@ layout: two-cols
 ---
 # Example of Nodes Explanation
 
-## Code 
+## Code
 <br>
 ```html
 <!DOCTYPE html>
@@ -594,14 +853,16 @@ layout: two-cols
     </script>
     <p>This is a paragraph.</p>
     <script src="index.js"></script>
-    
+
 
 </body>
 </html>
-```
+````
 
 ::right::
+
 ## The nodes
+
 ![Nodes image](./images/nodes.PNG)
 
 <style>
@@ -612,6 +873,7 @@ layout: two-cols
 </style>
 
 ---
+
 transition: slide-up
 layout: default
 
@@ -620,6 +882,7 @@ layout: default
 # Changing the style the content of an html page
 
 ## Code
+
 <br>
 ```html
 <h1 >Hello!</h1>
@@ -628,22 +891,39 @@ layout: default
         document.querySelector("h1").style.color = "red";
     </script>
     <p>This is a paragraph.</p>
+>>>>>>> dd8b661084961690b9a3c1fd25bd253d970b63e7
 ```
 
 <style>
 .header-title {
-  color: #3B82F6;
-  font-size: 2.5em;
+<<<<<<< HEAD
+  color: #EF4444;
+}
+</style>
+
+transition: fade
+layout: center
+class: text-center
+
+---
+
+# Thank You! {.thank-you}
+
+=======
+color: #3B82F6;
+font-size: 2.5em;
 }
 </style>
 
 ---
+
 transition: slide-up
 layout: default
 
 ---
 
 # Answer to the Assignment question
+
 ```js
 // creating a div element
 
@@ -653,11 +933,12 @@ const textDiv = document.createElement("div");
 const textPara = document.createElement("p");
 
 // adding text
-textPara.textContent = "See you on the other side, where we will discuss events in JavaScript. May the force be with you.";
+textPara.textContent =
+  "See you on the other side, where we will discuss events in JavaScript. May the force be with you.";
 textDiv.appendChild(textPara);
 
 document.body.appendChild(textDiv);
-textPara.style.fontFamily = 'Georgia', serif;
+(textPara.style.fontFamily = "Georgia"), serif;
 textPara.style.fontStyle = "italic";
 ```
 
@@ -669,13 +950,15 @@ textPara.style.fontStyle = "italic";
 </style>
 
 ---
+
 transition: fade
 layout: center
 class: text-center
+
 ---
 
-
 # JavaScript Modules and Related Concepts
+
 ### WEEK 1 - EXTRA CLASS
 
 ---
@@ -710,6 +993,7 @@ export function subtract(a, b) {
   return a - b;
 }
 ```
+
 <br>
 
 ```javascript
@@ -756,6 +1040,7 @@ import { greet } from "./utils.js";
 
 greet("World");
 ```
+
 <br>
 
 ```javascript
@@ -785,6 +1070,7 @@ export function subtract(a, b) {
 // app.js
 import { add, subtract } from "./math.js";
 ```
+
 <br>
 
 ### b) Renamed Exports/Imports
@@ -801,6 +1087,7 @@ export { add as sum };
 // app.js
 import { sum as addNumbers } from "./math.js";
 ```
+
 ---
 
 ### c) Default Export/Import
@@ -856,6 +1143,7 @@ You can:
   "type": "module"
 }
 ```
+
 ---
 
 ### Example:
@@ -913,6 +1201,7 @@ The `package.json` file is the configuration file for Node.js projects. It defin
   }
 }
 ```
+
 ---
 
 # Month 2 Week 1 {.header-title}
@@ -942,12 +1231,13 @@ The selected elements can be styled as preferred within the JavaScript code.
   </head>
   <body>
     <div id="container">
-    <h1 id="circle_5"></h1>
-    <p id="semester_2"></p>
-</div>
+      <h1 id="circle_5"></h1>
+      <p id="semester_2"></p>
+    </div>
   </body>
 </html>
 ```
+
 <br>
 ### Example of Selecting an Element by Its Unique Identifier (Id) Using `querySelector` and `getElementById`, and Styling the Selected Elements...
 
@@ -962,7 +1252,7 @@ const h1Element = document.querySelector("#circle_5");
 const h2Element = document.getElementById("semester_2");
 //throw an error if elements are not found
 if (h1Element === null) {
-};
+}
 if (h2Element === null) {
 }
 //If found, display these messages into the inner text and style it
@@ -971,10 +1261,13 @@ divElement.style =
 h1Element.innerHTML = "Altschool FrontEnd Circle-5";
 h2Element.innerHTML =
   "Summary of what we have learnt since the beginning of 2nd semester.";
-  ```
+```
+
 ---
-  
-  # Thank You! {.thank-you}
+
+# Thank You! {.thank-you}
+
+> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
 
 ## Questions & Discussion
 
@@ -989,4 +1282,13 @@ h2Element.innerHTML =
 }
 </style>
 
+## <<<<<<< HEAD
+
+transition: fade-out
+layout: default
+
 ---
+
+## =======
+
+> > > > > > > dd8b661084961690b9a3c1fd25bd253d970b63e7
