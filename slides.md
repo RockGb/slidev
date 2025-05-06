@@ -50,7 +50,7 @@ const goToSlide = (index) => {
 }
 span {
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: rgba(47, 45, 45, 0.38);
   text-decoration: none;
 }
 span:hover {
