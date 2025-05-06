@@ -30,6 +30,7 @@ mdc: true
 - **<span @click="goToSlide(3)">Month 1 Week 1</span>**
 - **<span @click="goToSlide(7)">Month 1 Week 2</span>**
 - **<span @click="goToSlide(22)">Month 1 Week 3</span>**
+- **<span @click="goToSlide(65)">Month 2 Week 3</span>**
 
 
 <script setup>
@@ -1363,6 +1364,138 @@ const [todos, setTodos] = React.useState([]);
 
 - useState returns a pair `[state, setState]`
 - Individual logic placed in **handlers**
+
+---
+
+# Month 2 Week 3 {.header-title}
+
+## Cont. of BUNDLERS (VITE) & TO-DO APP PR REVIEW
+
+### Summary:
+
+<br>
+
+# 1. Bundlers Overview (Continuation: Vite)
+<br>
+Browsers have limitations; bundlers help manage modern JavaScript features and dependencies.
+
+**Common bundlers:** Browserify, Webpack, Parcel, Vite
+
+## Benefits of bundlers:
+
+- Lazy loading (only load code when needed)
+- Dynamic imports for better performance
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+
+## 2. Focus on Vite
+
+Vite is a modern and fast bundler optimized for speed and simplicity.
+
+## 3. Creating a Vite Project
+
+**Long method:**
+
+
+```bash 
+mkdir new_project
+```
+
+```bash 
+cd new_project
+```
+
+```bash 
+npm init -y
+
+```
+
+```bash 
+npm install --save-dev vite
+
+```
+
+```bash 
+touch index.html index.css index.js
+
+```
+
+---
+
+## Set up build scripts in `package.json`:
+
+```json
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+}
+```
+
+## Start the development server:
+
+```bash
+npm run dev
+```
+
+*You can use* **`pnpm`** *instead of* **`npm`** *to initialize and install dependencies.*
+
+## Shortcut method: Creating a Vite Project
+
+```bash
+npm create vite@latest new_project --template vanilla
+```
+
+```bash
+# or using pnpm
+pnpm create vite@latest new_project --template vanilla
+```
+
+```bash
+cd new_project
+```
+
+---
+
+## Shortcut method: Creating a Vite Project cont.
+<br>
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+## 4. Pull Request Review – To-do App (Mariam’s Branch)
+<br>
+- We cloned and checked out Mariam’s `vite` branch.
+- Added `.gitignore` to exclude `node_modules` and other unnecessary files from version control.
+- To list all files (including hidden ones like `.git`):
+
+```bash
+ls -la
+```
+
+---
+
+## Contributions
+
+### Mariam:
+- Modularized the project structure  
+- Enabled double-click to edit feature  
+- Implemented `localStorage` saving  
+
+### Osawawo:
+- Added checkbox functionality
 
 ---
 
