@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1744&auto=format&fit=crop'
+background: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1744&auto=format&fit=crop"
 # some information about your slides (markdown enabled)
 title: AltSchool Frontend Circle 5
 info: |
@@ -52,8 +52,10 @@ span:hover {
 </style>
 
 ---
+
 transition: fade
 layout: default
+
 ---
 
 # Month 1 – Week 1 Recap {.header-title}
@@ -61,15 +63,14 @@ layout: default
 The Second Semester officially kicks off!
 
 ## 📚 Recommended Resources {.header-title}
+
 <br>
 
-- [**Learning How to Learn**](https://www.coursera.org/learn/learning-how-to-learn) – Coursera  
-- [**The Front End Developer/Engineer Handbook**](https://frontendmasters.com/guides/front-end-handbook/2024/) – Frontend Masters  
+- [**Learning How to Learn**](https://www.coursera.org/learn/learning-how-to-learn) – Coursera
+- [**The Front End Developer/Engineer Handbook**](https://frontendmasters.com/guides/front-end-handbook/2024/) – Frontend Masters
 - [**Refactoring UI**](https://refactoringui.com/) by Adam Wathan.
 
-
 <br>
-
 
 > **Goal:** Master JavaScript before moving on to React.  
 > **Semester Expectation:** Build and deploy React applications successfully.
@@ -80,26 +81,27 @@ The Second Semester officially kicks off!
   font-size: 2.5em;
 }
 </style>
+
 ---
 
 ANSWERS TO QUESTIONS (CONCERNS) {.header-title}
 
 ## ⚙️ Return Statement in JavaScript {.header-title}
 
-The `return` statement  
+The `return` statement
+
 - The return statement ends function execution and specifies a value to be called to the function caller.
 - The last line in a function must be a return statement.
 
 **Syntax:**
+
 ```js
 function functionName() {
   return value;
 }
 ```
 
-*The return value can be a variable, array, object, string, number, boolean or even a function.*
-
-
+_The return value can be a variable, array, object, string, number, boolean or even a function._
 
 <style>
 .header-title {
@@ -107,10 +109,13 @@ function functionName() {
   font-size: 2.5em;
 }
 </style>
+
 ---
-transition: slide-left
----
+
+## transition: slide-left
+
 **Example:**
+
 ```js
 function add(a, b) {
   return a + b;
@@ -118,28 +123,31 @@ function add(a, b) {
 
 let sum = add(3, 5);
 console.log(sum); // Output: 8
-
 ```
 
-*If return statement is omitted in a function, it returns undefined when called.*
+_If return statement is omitted in a function, it returns undefined when called._
 
 **Example:**
+
 ```js
 function greet(name) {
-console.log("Hello, " + name + "!");
+  console.log("Hello, " + name + "!");
 }
 
 let result = greet("Zoe");
 console.log(result); // Output: undefined
 ```
+
 ---
+
 transition: slide-left
 
 ---
 
-## Ways of Declaring Functions {.header-title} <br>
+## Ways of Declaring Functions {.header-title}
 
-- **Function Declaration:** A named function is defined with the **'function'** keyword 
+- **Function Declaration:** A named function is defined with the **'function'** keyword
+
 ```js
 function getUsername(user) {
   return user.username;
@@ -147,13 +155,15 @@ function getUsername(user) {
 ```
 
 - **Function Expression:** A function assigned to a variable
+
 ```js
-const getUsername = function(user) {
+const getUsername = function (user) {
   return user.username;
 };
 ```
 
 - **Arrow Function:** A concise way of writing function expression syntax, introduced in ES6
+
 ```js
 const getUsername = (user) => {
   return user.username;
@@ -161,38 +171,53 @@ const getUsername = (user) => {
 ```
 
 - **One Line Arrow Function(Implicit Return):** Function written on a single line, has implicit return statement.
+
 ```js
-const getUsername = user => user.username; 
+const getUsername = (user) => user.username;
 ```
 
 ---
+
 transition: fade
 layout: default
----
 
+---
 
 <br>
 
 ## 🔢 Arrays in Javascript {.header-title}
 
-An array is a data structure used to store multiple comma separated values. Arrays are declared using square brackets,  `[]`. 
+An array is a data structure used to store multiple comma separated values. Arrays are declared using square brackets, `[]`.
 
-*Example:*
+_Example:_
+
 ```js
-let arr = [1, 2, 3]
+let arr = [1, 2, 3];
 ```
 
 ```js
-let circleFiveMembers = ["Zoe", "Deborah", "Funmilola", "Augustina", "Angelina", "OgheneO'Tega", "Anthony", "Blessing", "Akanmu", "Arnold", "Kachi", "Omogbolahan"]
-console.log(circleFiveMembers[5]) // Output: OgheneO'Tega
+let circleFiveMembers = [
+  "Zoe",
+  "Deborah",
+  "Funmilola",
+  "Augustina",
+  "Angelina",
+  "OgheneO'Tega",
+  "Anthony",
+  "Blessing",
+  "Akanmu",
+  "Arnold",
+  "Kachi",
+  "Omogbolahan",
+];
+console.log(circleFiveMembers[5]); // Output: OgheneO'Tega
 ```
+
 <br>
 
-*In Javascript, an array can contain different data types.*
+_In Javascript, an array can contain different data types._
 
 **There are several array methods: push(), pop(), shift(), unshift(), map(), filter(), reduce(), sort(), reverse(), slice(), splice().**
-
-
 
 <style>
 .header-title {
@@ -203,26 +228,26 @@ console.log(circleFiveMembers[5]) // Output: OgheneO'Tega
 
 ---
 
-## 📌 Rest Parameters and Spread Operators{.header-title} 
+## 📌 Rest Parameters and Spread Operators{.header-title}
 
 Rest Parameters represents a concept which allows a function to accept any number of arguments and store in an array. Rest Parameters are used in functions with unknown number of arguments.
 
 Syntax:
 
- `function myFunction (...args)`
+`function myFunction (...args)`
 
 Example:
+
 ```js
 // function to sum up multiple numbers
 function sum(...nums) {
-    return nums.reduce((a, b) => a + b, 0);
+  return nums.reduce((a, b) => a + b, 0);
 }
 
-console.log(sum(1, 2, 3)) // Expected Output: 6
+console.log(sum(1, 2, 3)); // Expected Output: 6
 ```
 
-
-*It is important to note that only one rest parameter is allowed in a function definition and it must be the last parameter in a function's parameter list.*
+_It is important to note that only one rest parameter is allowed in a function definition and it must be the last parameter in a function's parameter list._
 
 <style>
 .header-title {
@@ -241,10 +266,11 @@ Spread Operator (`...`) expands an iterable like an array or string into more el
 const arr = [1, 2, 3];
 // Using for of loop
 for (const item of arr) {
-    console.log(item);
+  console.log(item);
 }
 // Output: 1 2 3
-``` 
+```
+
 <br>
 
 ### Spread operator can be used to copy (clone) arrays
@@ -252,11 +278,13 @@ for (const item of arr) {
 ```js
 let arr = [1, 2, 3];
 let newArr = [...arr];
-console.log(newArr) // Output: 1, 2, 3
+console.log(newArr); // Output: 1, 2, 3
 ```
+
 ---
 
 ### Spread operator can be used to merge arrays
+
 <br>
 ```js
 let girls = ["Jane", "Rose", "Blessing"];
@@ -267,11 +295,12 @@ console.log(allStudents); // [ "Jane", "Rose", "Blessing", "John", "David", "Sam
 <br>
 
 ### Spread operator can be used to add elements to an array
+
 <br>
 
 ```js
 const numbers = [1, 2, 3];
-const newNumbers = [...numbers, 4]
+const newNumbers = [...numbers, 4];
 console.log(newNumbers); // [1, 2, 3, 4]
 ```
 
@@ -279,25 +308,27 @@ Spread operator can also be used with objects.
 
 ---
 
-## 🔁 Callback Functions{.header-title} 
+## 🔁 Callback Functions{.header-title}
 
 "I will call you back later!"
 
 A callback is a function passed as an argument to another function and gets executed after the completion of a specific task or when an event occurs.
 
 Example
+
 ```js
 function handleCookies(message, acceptFn, rejectFn) {
-    let result = confirm(message);
-    // If user clicks 'OK'
-    if(result) acceptFn();
-    // If user clicks 'Cancel'
-    else rejectFn();
+  let result = confirm(message);
+  // If user clicks 'OK'
+  if (result) acceptFn();
+  // If user clicks 'Cancel'
+  else rejectFn();
 }
 
-handleCookies('Do you accept cookies on this site?', 
-    () => console.log('Cookies accepted'), 
-    () => console.log('Cookies rejected')
+handleCookies(
+  "Do you accept cookies on this site?",
+  () => console.log("Cookies accepted"),
+  () => console.log("Cookies rejected")
 );
 ```
 
@@ -315,9 +346,10 @@ handleCookies('Do you accept cookies on this site?',
 Callbacks are mostly used in asynchronous operations (tasks running independently)
 
 Example using `setTimeout` function
+
 ```js
 function showMessage() {
-    console.log("Hello after 3 seconds!");
+  console.log("Hello after 3 seconds!");
 }
 
 setTimeout(showMessage, 3000);
@@ -325,16 +357,20 @@ setTimeout(showMessage, 3000);
 
 `setTimeout` is a built-in asynchronous function in Javascript and it takes in two parameters - a callback function and a delay.
 
-*Note if `showMessage()` is added the function will be executed immediately and return undefined.*
+_Note if `showMessage()` is added the function will be executed immediately and return undefined._
 
 Callbacks are also used in event listeners
+
 ```js
-document.getElementById('myBtn').addEventListener("click", () => console.log("Button clicked!"))
+document
+  .getElementById("myBtn")
+  .addEventListener("click", () => console.log("Button clicked!"));
 ```
 
 The function (callback) passed as a parameter to `addEventListener` will only be executed when the button is clicked.
 
 ---
+
 transition: slide-up
 layout: default
 
@@ -344,31 +380,32 @@ layout: default
 
 ## PROMISES
 
-A promise is an object that represents a future result of an asynchronous operation. It has 3 states.  They are :
+A promise is an object that represents a future result of an asynchronous operation. It has 3 states. They are :
 
 1. Pending - initial state
 2. Fulfilled - successful completion
 3. Rejected - Operation Failed
-<br>
+   <br>
 
 ### How to create a promise?
-Simply: 
-```js
-newPromise()
 
+Simply:
+
+```js
+newPromise();
 ```
+
 <br>
 
 **A promise will take the function for the fulfilled and the rejected :**
+
 ```js
-newPromise(resolve, reject)
+newPromise(resolve, reject);
 ```
 
 <br>
 
 Contd on next page
-
-
 
 <style>
 .header-title {
@@ -377,9 +414,12 @@ Contd on next page
 </style>
 
 ---
+
 transition: fade-out
 layout: two-cols
+
 ---
+
 Sample syntax:
 
 ```js
@@ -391,34 +431,35 @@ reject(error); // promise is rejected with error
 }
 });
 ```
+
 <br>
 
 ::right::
 
 Sample Code:
+
 ```js
 function fetchData(url) {
   return new Promise((resolve, reject) => {
     // Simulating network request
     setTimeout(() => {
-      if (url.includes('success')) {
-        resolve({ data: 'Here is your data', status: 200 });
+      if (url.includes("success")) {
+        resolve({ data: "Here is your data", status: 200 });
       } else {
-        reject({ error: 'Failed to fetch data', status: 404 });
+        reject({ error: "Failed to fetch data", status: 404 });
       }
     }, 2000);
   });
 }
 
 // Using the promise
-fetchData('https://api.example.com/success')
-  .then(response => {
-    console.log('Success:', response.data);
+fetchData("https://api.example.com/success")
+  .then((response) => {
+    console.log("Success:", response.data);
   })
-  .catch(error => {
-    console.log('Error:', error.error);
+  .catch((error) => {
+    console.log("Error:", error.error);
   });
-
 ```
 
 <style>
@@ -428,11 +469,14 @@ fetchData('https://api.example.com/success')
 </style>
 
 ---
+
 transition: fade-out
 layout: default
+
 ---
 
 ### Async / Await
+
 It is a Modern way to write Promises
 
 **Note** : Putting 'async' in front of a function automatically makes it a **Promise**.
@@ -440,18 +484,18 @@ It is a Modern way to write Promises
 ```js
 async function getData() {
   try {
-    const response = await fetchData('https://api.example.com/success');
-    console.log('Data:', response.data);
+    const response = await fetchData("https://api.example.com/success");
+    console.log("Data:", response.data);
     return response;
   } catch (error) {
-    console.error('Error:', error);
+    console.error("Error:", error);
     throw error;
   }
 }
 
 // Call the async function
-getData().then(data => {
-  console.log('Processing data further');
+getData().then((data) => {
+  console.log("Processing data further");
 });
 ```
 
@@ -462,21 +506,24 @@ getData().then(data => {
 </style>
 
 ---
+
 transition: slide-up
 layout: default
+
 ---
 
 # Month 1 Week 3 {.header-title}
 
 ## Text
--  1
--  2
--  3
+
+- 1
+- 2
+- 3
 
 ### Code Example
+
 ```js
-class Feature {
-}
+class Feature {}
 ```
 
 <style>
@@ -486,16 +533,20 @@ class Feature {
 </style>
 
 ---
+
 transition: slide-left
 layout: default
+
 ---
 
 # Month 1 Week 4 {.header-title}
 
 ## BOM, DOM, and CSSOM
+
 <br>
 
 ### BOM (Browser Object Model)
+
 <br>
 
 - BOM is the interface between JavaScript and the browser.
@@ -513,6 +564,7 @@ layout: default
 </style>
 
 ---
+
 transition: slide-up
 layout: default
 
@@ -532,6 +584,7 @@ layout: default
 </style>
 
 ---
+
 transition: slide-up
 layout: default
 
@@ -553,6 +606,7 @@ layout: default
 </style>
 
 ---
+
 transition: slide-up
 layout: default
 
@@ -564,7 +618,6 @@ layout: default
 - `<html>`, `<body>`, `<h1>`, and `<p>` are **element nodes**.
 - `"Hello!"` and `"this is a paragraph"` are **text nodes**.
 
-
 <style>
 .header-title {
   color: #3B82F6;
@@ -573,13 +626,16 @@ layout: default
 </style>
 
 ---
+
 transition: slide-up
 layout: two-cols
 
 ---
+
 # Example of Nodes Explanation
 
-## Code 
+## Code
+
 <br>
 ```html
 <!DOCTYPE html>
@@ -597,14 +653,15 @@ layout: two-cols
     </script>
     <p>This is a paragraph.</p>
     <script src="index.js"></script>
-    
 
 </body>
 </html>
 ```
 
 ::right::
+
 ## The nodes
+
 ![Nodes image](./images/nodes.PNG)
 
 <style>
@@ -615,6 +672,7 @@ layout: two-cols
 </style>
 
 ---
+
 transition: slide-up
 layout: default
 
@@ -623,6 +681,7 @@ layout: default
 # Changing the style the content of an html page
 
 ## Code
+
 <br>
 ```html
 <h1 >Hello!</h1>
@@ -641,12 +700,14 @@ layout: default
 </style>
 
 ---
+
 transition: slide-up
 layout: default
 
 ---
 
 # Answer to the Assignment question
+
 ```js
 // creating a div element
 
@@ -656,11 +717,12 @@ const textDiv = document.createElement("div");
 const textPara = document.createElement("p");
 
 // adding text
-textPara.textContent = "See you on the other side, where we will discuss events in JavaScript. May the force be with you.";
+textPara.textContent =
+  "See you on the other side, where we will discuss events in JavaScript. May the force be with you.";
 textDiv.appendChild(textPara);
 
 document.body.appendChild(textDiv);
-textPara.style.fontFamily = 'Georgia', serif;
+(textPara.style.fontFamily = "Georgia"), serif;
 textPara.style.fontStyle = "italic";
 ```
 
@@ -672,13 +734,15 @@ textPara.style.fontStyle = "italic";
 </style>
 
 ---
+
 transition: fade
 layout: center
 class: text-center
+
 ---
 
-
 # JavaScript Modules and Related Concepts
+
 ### WEEK 1 - EXTRA CLASS
 
 ---
@@ -713,6 +777,7 @@ export function subtract(a, b) {
   return a - b;
 }
 ```
+
 <br>
 
 ```javascript
@@ -759,6 +824,7 @@ import { greet } from "./utils.js";
 
 greet("World");
 ```
+
 <br>
 
 ```javascript
@@ -788,6 +854,7 @@ export function subtract(a, b) {
 // app.js
 import { add, subtract } from "./math.js";
 ```
+
 <br>
 
 ### b) Renamed Exports/Imports
@@ -804,6 +871,7 @@ export { add as sum };
 // app.js
 import { sum as addNumbers } from "./math.js";
 ```
+
 ---
 
 ### c) Default Export/Import
@@ -859,6 +927,7 @@ You can:
   "type": "module"
 }
 ```
+
 ---
 
 ### Example:
@@ -916,6 +985,7 @@ The `package.json` file is the configuration file for Node.js projects. It defin
   }
 }
 ```
+
 ---
 
 # Month 2 Week 1 {.header-title}
@@ -945,12 +1015,13 @@ The selected elements can be styled as preferred within the JavaScript code.
   </head>
   <body>
     <div id="container">
-    <h1 id="circle_5"></h1>
-    <p id="semester_2"></p>
-</div>
+      <h1 id="circle_5"></h1>
+      <p id="semester_2"></p>
+    </div>
   </body>
 </html>
 ```
+
 <br>
 ### Example of Selecting an Element by Its Unique Identifier (Id) Using `querySelector` and `getElementById`, and Styling the Selected Elements...
 
@@ -965,7 +1036,7 @@ const h1Element = document.querySelector("#circle_5");
 const h2Element = document.getElementById("semester_2");
 //throw an error if elements are not found
 if (h1Element === null) {
-};
+}
 if (h2Element === null) {
 }
 //If found, display these messages into the inner text and style it
@@ -974,10 +1045,168 @@ divElement.style =
 h1Element.innerHTML = "Altschool FrontEnd Circle-5";
 h2Element.innerHTML =
   "Summary of what we have learnt since the beginning of 2nd semester.";
-  ```
+```
+
 ---
-  
-  # Thank You! {.thank-you}
+
+# React in Vanilla Projects
+
+## Libraries vs Frameworks
+
+- **Library**: A set of tools where _you control the flow_.
+
+  - Examples: React, Svelte, Angular, Vue
+
+- **Framework**: An opinionated structure that _controls the flow_.
+  - Example: Next.js (built on React)
+
+## Why React?
+
+- 🔹 **Simple**: Focuses on UI rendering
+- 🔹 **Popular**: Strong community, resources, and job market
+- 🔹 **Performance**: Uses Virtual DOM for efficient rendering
+- 🔹 **Flexible**: Build your app your way
+
+---
+
+## Core Concepts
+
+- **UI** = What user sees
+- **State** = Data that powers the UI
+- React turns `UI + State` into **components** (functions that return JSX)
+
+---
+
+## Vanilla JS to React (Example)
+
+```js
+function mk(type) {
+  const el = document.createElement(type);
+  el.textContent = "hello world";
+  return el;
+}
+document.body.appendChild(mk("h6"));
+```
+
+## Rewriting with Props
+
+```js
+function mk(type, props) {
+  const el = document.createElement(type);
+  if (props) Object.assign(el, props);
+  return el;
+}
+
+const el = mk("h1", { textContent: "Hello World", className: "title" });
+document.body.appendChild(el);
+```
+
+---
+
+# React Setup & Vite
+
+## Build Tools
+
+- 🛠️ **Purpose**: Compile, bundle & optimize apps
+- Examples: Webpack, Vite, TurboRepo, Parcel, Rspack
+
+## Why Vite?
+
+- ⚡ Fast, uses native ES modules
+- 🔧 Zero-config setup
+- Supports React, Vue, etc.
+
+---
+
+## Install Vite (Vanilla + JS)
+
+```bash
+npm create vite@latest
+
+# Then:
+cd vite-project
+npm install
+npm run dev
+```
+
+- Visit your app on: `http://localhost:5173`
+- Build production: `npm run build`
+
+---
+
+## Add React via CDN
+
+### Development
+
+```html
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.development.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+></script>
+```
+
+### Production
+
+```html
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.production.min.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+></script>
+```
+
+---
+
+# React DOM Methods & Components
+
+## Creating React Elements
+
+```js
+const nemElement = React.createElement("h1", null, "I am a new element");
+console.log(nemElement); // Logs a React object, not HTML
+```
+
+## Rendering Elements
+
+```js
+const rootElement = document.querySelector("#app");
+const root = ReactDOM.createRoot(rootElement);
+root.render(nemElement);
+```
+
+## Creating Components
+
+```js
+function App() {
+  return React.createElement("div", null, "This is a React Component");
+}
+
+const root = ReactDOM.createRoot(document.querySelector("#app"));
+root.render(React.createElement(App));
+```
+
+---
+
+## React State
+
+```js
+const [todos, setTodos] = React.useState([]);
+// Default values: [], '', null, 0
+```
+
+- useState returns a pair `[state, setState]`
+- Individual logic placed in **handlers**
+
+---
+
+# Thank You! {.thank-you}
 
 ## Questions & Discussion
 
