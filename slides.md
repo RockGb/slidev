@@ -32,13 +32,11 @@ mdc: true
 - **<span @click="goToSlide(22)">Month 1 Week 3</span>**
 - **<span @click="goToSlide(65)">Month 2 Week 3</span>**
 
-
 <script setup>
 const goToSlide = (index) => {
   $slidev.nav.go(index)
   }
 </script>
-
 
 <style>
 .transition-title {
@@ -510,15 +508,11 @@ getData().then((data) => {
 
 ---
 
-
-
-
-
 # Month 1 Week 3 {.header-title}
 
 ## API’S AND ITS FUNCTION
-### SUMMARY: { .hhh }
 
+### SUMMARY: { .hhh }
 
 - The primary responsibility of a front end developer is to create pixel perfect UI and also
   to make the UI functional and usable.
@@ -529,7 +523,6 @@ getData().then((data) => {
 - API’s are also used to submit forms.
 - There are different ways to talk to the API’s which are : **GET**, **POST**.
 
-
 <style>
 .header-title {
   color: #F59E0B;
@@ -538,31 +531,26 @@ getData().then((data) => {
     color:green;
   }
 </style>
+
 ---
 
-
-
 **GET**
-
 
 This is a single way to fetch information back to us.Example of the GET request is when you visit a browser.
 
   <img src="./images/pic.jpg"/>
 
-
 ---
 
 # **POST**
 
-
 Basically means to send the browser an information to get back another information.
 the browser cannot make a POST request as a first request inside a URL tab especially.
 
-
 A very good example of POST is when you fill a form or sign up by inputting your name,address,email and other data and submit,then you log in and it returns a feedback which indicates that your information has been received. i.e a token,which can further be sent to another API called USERS.Then the `Headers` must be parsed in using the token which is encrypted with the user’s details. This confirms that it's the same user registered that is logged in.
 
-
 ## Code
+
 ```js
 Const response = await fetch (‘/api/users’ {git checkout
     method : ‘POST’,
@@ -576,7 +564,6 @@ const  result = await response.json ()
 
 ---
 
-
 <br>
 <br>
 
@@ -585,22 +572,19 @@ The code above shows the process using method POST and we get something called `
 <br>
 <br>
 
-
 Encryption and Decryption is used to store and reveal user ID using a form of token either cookies or local storage,session etc.
 Backend must have a documentation for the frontends to rely on by providing API’s to communicate with.They are the intermediary between frontend and the database.
 There are several tools that can give us the same interface of API’s, example is the **Github API Docs**.They can be used to create repositories using tokens.
 
 ---
 
-
 <br>
 <br>
-
 
 ## **Using Curls in the command line**.
-- Install curl if it isn't already installed on your machine. To check if curl is installed, execute curl --version in the command line. 
-- Create an access token. For example, create a personal access token or a GitHub App user access token. You will use this token to authenticate your request, so you should give it any scopes or permissions that are required to access the endpoint.
 
+- Install curl if it isn't already installed on your machine. To check if curl is installed, execute curl --version in the command line.
+- Create an access token. For example, create a personal access token or a GitHub App user access token. You will use this token to authenticate your request, so you should give it any scopes or permissions that are required to access the endpoint.
 
 <br>
 <br>
@@ -614,6 +598,7 @@ curl --request GET \
   --header "Accept: application/vnd.github+json" \
   --header "Authorization: Bearer YOUR-TOKEN"
 ```
+
 ---
 
 <br>
@@ -628,23 +613,18 @@ curl --request GET \
 
 Javascript provides a built in URL class that makes working with URL easier and safer.The URL object provides a convenient method to parse in URLs.
 
-
 <style>
 .header-title {
   color: #10B981;
 }
 </style>
 
-
 ---
-
 
 ## Code
 
-
 ```js
 const url = new URL("https://example.com/products?id=123&category=books");
-
 
 console.log(url.href); // "Full URL: "https://example.com/products?id=123&category=books"
 console.log(url.origin); // "https://example.com"
@@ -656,14 +636,11 @@ console.log(url.hash); // "" (empty if not present)
 console.log(url.searchParams.get("id")); // "123"
 console.log(url.searchParams.get("category")); // "books"
 
-
 url.searchParams.set("category", "fiction"); // Update parameter
 url.searchParams.append("sort", "price"); // Add new parameter
 url.searchParams.delete("id"); // Remove a parameter
 
-
 console.log(url.toString()); // New URL after changes
-
 
 const newUrl = new URL("https://example.com/page");
 newUrl.searchParams.set("user", "alice");
@@ -684,21 +661,17 @@ our needs by creating a fake data that looks like JSON.
 
 # TOPICS
 
-
 - MODULES & JAVASCRIPT IN THE BROWSER(DOM)
 - IMPORT & EXPORT (Why do they exist?)
 - WHAT IS DOM?
 
 ---
 
-
 <style>
 .header-title {
   color: #F59E0B;
 }
 </style>
-
-
 
 # Month 1 Week 4 {.header-title}
 
@@ -902,11 +875,632 @@ class: text-center
 
 ---
 
+# Month 2 Week 1 {.header-title}
+
+## Cont. of DOM in JavaScript (Selecting an Element by Its Unique Identifier (Id) and Styling It Within JavaScript)
+
+### Summary:
+
+DOM (also known as **Document Object Model**) is the object representation of HTML.  
+An HTML document could be declared with an empty body.  
+The **Id** of each empty element node can then be selected using `querySelector` or `getElementById`.  
+The `innerHTML` can then be assigned a value after a variable has been declared.  
+The selected elements can be styled as preferred within the JavaScript code.
+
+---
+
+### Example of a Document with an Empty Body
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js" defer></script>
+    <title>Dom in JavaScript</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="circle_5"></h1>
+      <p id="semester_2"></p>
+    </div>
+  </body>
+</html>
+```
+
+<br>
+### Example of Selecting an Element by Its Unique Identifier (Id) Using `querySelector` and `getElementById`, and Styling the Selected Elements...
+
+---
+
+You can select HTML elements by their unique `id` using either `querySelector` or `getElementById`. After selection, you can modify their content and apply styles directly with JavaScript.
+
+```js
+//Selecting elements by id using the querySelector
+const divElement = document.getElementById("container");
+const h1Element = document.querySelector("#circle_5");
+const h2Element = document.getElementById("semester_2");
+//throw an error if elements are not found
+if (h1Element === null) {
+}
+if (h2Element === null) {
+}
+//If found, display these messages into the inner text and style it
+divElement.style =
+  "Justify-content: center; text-align: center; background-color: #f7f7f7; padding: 20px; margin: 20px 0; border: 1px solid #ccc;border-radius: 15px;";
+h1Element.innerHTML = "Altschool FrontEnd Circle-5";
+h2Element.innerHTML =
+  "Summary of what we have learnt since the beginning of 2nd semester.";
+```
+
+---
+
+# Month 2 Week 2 {.header-title}
+
+## BUILDING A TODO FROM SCRATCH WITH HTML, CSS AND JAVASCRIPT
+
+A Todo Application would have an input field, an add and delete button and a list of possible todo’s. The aim was to build a todo application to depict what form submission does in javascript
+
+---
+
+## Form Submission Event and Methods
+
+`Form Submission Methods` lets users send data to a server for processing
+. JavaScript handles form submission in two main ways
+
+- Using the submit event
+- Using the form.submit() method
+
+The `submit event` is triggered when a form is submitted. It’s often used to validate form data or prevent the default action to handle it with JavaScript instead
+
+Forms are submitted either by:
+
+- Clicking the Submit button
+- Pressing Enter while focused on an input field
+
+---
+
+```js
+// Import the form submission handler function
+import { todoSubmitHandler } from "./src/submitHandler.js";
+
+// Select the form and todo list elements
+let todoForm = document.querySelector("#todoForm");
+let todoList = document.querySelector("#todoList");
+
+// ✅ Attach the form submission event listener (outside async function)
+if (todoForm) {
+  todoForm.addEventListener("submit", (e) =>
+    todoSubmitHandler(e, todoForm, todoList)
+  );
+} else {
+  console.warn("#todoForm element not found");
+}
+
+// ✅ Attach the form submission event listener again inside async function
+(async function main() {
+  let sum = await import("./src/sum.js");
+  console.log(sum.default(2, 5));
+
+  todoForm.addEventListener("submit", todoSubmitHandler);
+})();
+```
+
+---
+
+## Form Validation
+
+1. `Disabling Browser Validation (novalidate attribute)`:
+   You can turn off the browser’s built-in validation by adding the novalidate attribute to the `form` This allows you to fully control validation using JavaScript or a custom library, rather than relying on automatic checks.
+
+2. `HTML5 Validation Attributes` :
+   HTML provides built-in validation through attributes like required, minlength, maxlength, min, max, pattern, and type. These attributes make it easy to add basic validation rules directly in the HTML without writing JavaScript.
+
+3. `Constraint Validation API (JavaScript-based control)`:
+   The Constraint Validation API lets you programmatically check and customize form validation in JavaScript. It provides methods like checkValidity() and setCustomValidity(), and properties like validity and validationMessage, allowing you to display custom messages, check specific errors, and control when and how a form submits.
+
+---
+
+```js
+// Import the necessary handler
+import { todoSubmitHandler } from "./src/submitHandler.js";
+
+// Select the form and input elements
+let todoForm = document.querySelector("#todoForm");
+let todoList = document.querySelector("#todoList");
+const todoInput = todoForm.querySelector("#todo"); // Assuming there's an input with id 'todo'
+
+// ✅ Add form submission event listener with validation
+if (todoForm) {
+  todoForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent form from submitting immediately
+
+    // Form validation
+    if (!todoInput.value.trim()) {
+      // Check if the input is empty or just spaces
+      alert("Please enter a todo task!");
+      todoInput.focus(); // Optionally focus on the input field
+      return; // Exit if validation fails
+    }
+
+    // If valid, proceed to submit
+    todoSubmitHandler(e, todoForm, todoList);
+  });
+} else {
+  console.warn("#todoForm element not found");
+}
+```
+
+---
+
+## Form Data
+
+FormData is a JavaScript object that lets you easily collect and work with form data, especially for sending it with fetch() or XMLHttpRequest. It grabs form input values as key-value pairs.
+
+---
+
+### Using FormData with a submit event
+
+```js
+<form id="myForm">
+  <input type="text" name="username" placeholder="Username" />
+  <input type="email" name="email" placeholder="Email" />
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  const form = document.getElementById('myForm')
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault() // prevent form from submitting normally
+
+    const formData = new FormData(form)
+
+    for (const [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`)
+    }
+
+    // You could also send formData using fetch()
+    // fetch('/submit', { method: 'POST', body: formData })
+  })
+</script>
+```
+
+---
+
+## event.preventDefault() role in the todo app
+
+event.preventDefault() stops the browser’s default behavior when an event occurs.
+In a todo app, you’re using a form to allow the user to add a new task, something like this
+
+```html
+<form id="todo-form">
+  <input type="text" id="todo-input" placeholder="Add a new task" />
+  <button type="submit">Add</button>
+</form>
+<ul id="todo-list"></ul>
+```
+
+Normally, when you click the submit button or press Enter inside the form, the browser submits the form and reloads the page (this is the default behavior for HTML forms).
+
+But in a todo app, you don’t want the page to reload—you just want to add the task dynamically with JavaScript.
+
+That’s where event.preventDefault() comes in. You call it inside the event handler for the form’s submit event to stop the form from reloading the page:
+
+---
+
+```js
+const form = document.getElementById("todo-form");
+const input = document.getElementById("todo-input");
+const list = document.getElementById("todo-list");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // 🚩 stop form from refreshing the page
+
+  const task = input.value.trim();
+  if (task !== "") {
+    const li = document.createElement("li");
+    li.textContent = task;
+    list.appendChild(li);
+    input.value = ""; // clear input
+  }
+});
+```
+
+Without event.preventDefault(), every time you submit:
+✅ The task would get added,
+❌ but the page would reload immediately afterward—erasing everything from the DOM.
+By preventing the default behavior, you keep everything on the page dynamically updated without a refresh.
+
+In simple terms:
+event.preventDefault() stops the page from reloading when the form is submitted, allowing your JavaScript to handle adding the todo item smoothly.
+
+LINK TO THE REPO CREATED BY THE INSTRUCTOR
+https://github.com/Oluwasetemi/todo-js-app
+
+---
+
+# Month 2 Week 3 {.header-title}
+
+## Cont. of BUNDLERS (VITE) & TO-DO APP PR REVIEW
+
+### Summary:
+
+<br>
+
+# 1. Bundlers Overview (Continuation: Vite)
+
+<br>
+Browsers have limitations; bundlers help manage modern JavaScript features and dependencies.
+
+**Common bundlers:** Browserify, Webpack, Parcel, Vite
+
+## Benefits of bundlers:
+
+- Lazy loading (only load code when needed)
+- Dynamic imports for better performance
+
+<style>
+.header-title {
+  color: #3B82F6;
+  font-size: 2.5em;
+}
+</style>
+
+---
+
+## 2. Focus on Vite
+
+Vite is a modern and fast bundler optimized for speed and simplicity.
+
+## 3. Creating a Vite Project
+
+**Long method:**
+
+```bash
+mkdir new_project
+```
+
+```bash
+cd new_project
+```
+
+```bash
+npm init -y
+
+```
+
+```bash
+npm install --save-dev vite
+
+```
+
+```bash
+touch index.html index.css index.js
+
+```
+
+---
+
+## Set up build scripts in `package.json`:
+
+```json
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+}
+```
+
+## Start the development server:
+
+```bash
+npm run dev
+```
+
+_You can use_ **`pnpm`** _instead of_ **`npm`** _to initialize and install dependencies._
+
+## Shortcut method: Creating a Vite Project
+
+```bash
+npm create vite@latest new_project --template vanilla
+```
+
+```bash
+# or using pnpm
+pnpm create vite@latest new_project --template vanilla
+```
+
+```bash
+cd new_project
+```
+
+---
+
+## Shortcut method: Creating a Vite Project cont.
+
+<br>
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+## 4. Pull Request Review – To-do App (Mariam’s Branch)
+
+<br>
+- We cloned and checked out Mariam’s `vite` branch.
+- Added `.gitignore` to exclude `node_modules` and other unnecessary files from version control.
+- To list all files (including hidden ones like `.git`):
+
+```bash
+ls -la
+```
+
+---
+
+## Contributions
+
+### Mariam:
+
+- Modularized the project structure
+- Enabled double-click to edit feature
+- Implemented `localStorage` saving
+
+### Osawawo:
+
+- Added checkbox functionality
+
+---
+
+# Month 2 Week 4
+
+## Arrow Functions in JavaScript
+
+An arrow function is a shorter way to write function expressions introduced in ES6.
+
+### Traditional Function
+
+```js
+function add(a, b) {
+  return a + b;
+}
+```
+
+### Arrow Function
+
+```js
+const add = (a, b) => a + b;
+```
+
+---
+
+## Key Features of Arrow Functions
+
+### 1. Concise Syntax
+
+Arrow functions can be written in one line for simple operations.
+
+```js
+const greet = (name) => `Hello, ${name}`;
+```
+
+- If only one parameter: no need for `()`
+- If more than one: wrap them in `()`
+- If body has only one expression: no `{}` or `return` needed
+
+---
+
+### 2. No `this` Binding
+
+Arrow functions inherit `this` from their lexical context.
+
+```js
+function Person() {
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++;
+    console.log(this.age); // `this` refers to Person
+  }, 1000);
+}
+new Person();
+```
+
+A regular function would lose the correct `this`.
+
+---
+
+### 3. Cannot Be Used as Constructors
+
+```js
+const User = () => {};
+const u = new User(); // TypeError
+```
+
+### 4. No `arguments` Object
+
+```js
+const test = () => {
+  console.log(arguments); // ReferenceError
+};
+```
+
+Instead, use rest parameters:
+
+```js
+const test = (...args) => {
+  console.log(args); // OK
+};
+```
+
+### 5. No `super` Binding
+
+Avoid using arrow functions for class methods that rely on `super`.
+
+---
+
+## Examples
+
+### Multi-line Arrow Function
+
+```js
+const multiply = (a, b) => {
+  const result = a * b;
+  return result;
+};
+```
+
+### Returning an Object
+
+Wrap the object in parentheses:
+
+```js
+const getUser = () => ({ name: "ojo", role: "instructor" });
+```
+
+---
+
+## Ways to Create Event Listeners in JavaScript
+
+### 1. HTML Inline Event
+
+```html
+<button onclick="alert('Clicked!')">Click me</button>
+```
+
+### 2. DOM Element Property
+
+```js
+const btn = document.getElementById("myBtn");
+btn.onclick = () => {
+  alert("Clicked!");
+};
+```
+
+### 3. `addEventListener` Method (Preferred)
+
+```js
+const btn = document.getElementById("myBtn");
+btn.addEventListener("click", () => {
+  alert("Clicked!");
+});
+```
+
+You can remove it with `removeEventListener`.
+
+---
+
+## Converting Between Objects and Arrays
+
+### Object → Array
+
+```js
+const user = { name: "Alex", age: 25 };
+```
+
+- `Object.keys(obj)` → `["name", "age"]`
+- `Object.values(obj)` → `["Alex", 25]`
+- `Object.entries(obj)` → `[["name", "Alex"], ["age", 25]]`
+
+### Array → Object
+
+```js
+const entries = [
+  ["name", "Alex"],
+  ["age", 25],
+];
+const obj = Object.fromEntries(entries);
+console.log(obj); // { name: "Alex", age: 25 }
+```
+
+You can also use `reduce()` for custom transformations.
+
+---
+
+## How to Call a Function in JavaScript
+
+### Basic Function Call
+
+```js
+function greet(name) {
+  console.log("Hello, " + name);
+}
+greet("Sam"); // Hello, Sam
+```
+
+### Arrow Function Call
+
+```js
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5
+```
+
+### Calling with Arguments
+
+```js
+function sum(x, y) {
+  return x + y;
+}
+let result = sum(4, 5); // result = 9
+```
+
+---
+
+## Objects Have 3 Behaviors
+
+When defining properties using `Object.defineProperty`, you can set:
+
+### 1. Enumerable
+
+```js
+Object.defineProperty(obj, "name", {
+  value: "Alex",
+  enumerable: true,
+});
+```
+
+### 2. Configurable
+
+```js
+Object.defineProperty(obj, "name", {
+  configurable: true,
+});
+```
+
+---
+
+### 3. Writable
+
+```js
+Object.defineProperty(obj, "name", {
+  writable: true,
+});
+```
+
+You can check these using:
+
+```js
+console.log(Object.getOwnPropertyDescriptor(obj, "name"));
+```
+
+---
+
+## When to Use Arrow Functions
+
+- Short callbacks
+- Functional programming
+- Preserving `this` (e.g., in React)
+
+---
+
 # JavaScript Modules and Related Concepts
 
 ### WEEK 1 - EXTRA CLASS
-
----
 
 ## 1. Modules and Modularity
 
@@ -1149,250 +1743,6 @@ The `package.json` file is the configuration file for Node.js projects. It defin
 
 ---
 
-# Month 2 Week 1 {.header-title}
-
-## Cont. of DOM in JavaScript (Selecting an Element by Its Unique Identifier (Id) and Styling It Within JavaScript)
-
-### Summary:
-
-DOM (also known as **Document Object Model**) is the object representation of HTML.  
-An HTML document could be declared with an empty body.  
-The **Id** of each empty element node can then be selected using `querySelector` or `getElementById`.  
-The `innerHTML` can then be assigned a value after a variable has been declared.  
-The selected elements can be styled as preferred within the JavaScript code.
-
----
-
-### Example of a Document with an Empty Body
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./index.js" defer></script>
-    <title>Dom in JavaScript</title>
-  </head>
-  <body>
-    <div id="container">
-      <h1 id="circle_5"></h1>
-      <p id="semester_2"></p>
-    </div>
-  </body>
-</html>
-```
-
-<br>
-### Example of Selecting an Element by Its Unique Identifier (Id) Using `querySelector` and `getElementById`, and Styling the Selected Elements...
-
----
-
-You can select HTML elements by their unique `id` using either `querySelector` or `getElementById`. After selection, you can modify their content and apply styles directly with JavaScript.
-
-```js
-//Selecting elements by id using the querySelector
-const divElement = document.getElementById("container");
-const h1Element = document.querySelector("#circle_5");
-const h2Element = document.getElementById("semester_2");
-//throw an error if elements are not found
-if (h1Element === null) {
-}
-if (h2Element === null) {
-}
-//If found, display these messages into the inner text and style it
-divElement.style =
-  "Justify-content: center; text-align: center; background-color: #f7f7f7; padding: 20px; margin: 20px 0; border: 1px solid #ccc;border-radius: 15px;";
-h1Element.innerHTML = "Altschool FrontEnd Circle-5";
-h2Element.innerHTML =
-  "Summary of what we have learnt since the beginning of 2nd semester.";
-```
-
----
-
-# Month 2 Week 2 {.header-title}
-
-## BUILDING A TODO FROM SCRATCH WITH HTML, CSS AND JAVASCRIPT
-
-A Todo Application would have an input field, an add and delete button and a list of possible todo’s. The aim was to build a todo application to depict what form submission does in javascript
-
----
-
-## Form Submission Event and Methods
-`Form Submission Methods` lets users send data to a server for processing 
-. JavaScript handles form submission in two main ways
-- Using the submit event
-- Using the form.submit() method
-
-The `submit event` is triggered when a form is submitted. It’s often used to validate form data or prevent the default action to handle it with JavaScript instead 
-
-Forms are submitted either by:
-- Clicking the Submit button 
-- Pressing Enter while focused on an input field
-
----
-
-```js
-// Import the form submission handler function
-import { todoSubmitHandler } from "./src/submitHandler.js";
-
-// Select the form and todo list elements
-let todoForm = document.querySelector("#todoForm");
-let todoList = document.querySelector("#todoList");
-
-// ✅ Attach the form submission event listener (outside async function)
-if (todoForm) {
-  todoForm.addEventListener("submit", (e) => 
-    todoSubmitHandler(e, todoForm, todoList)
-  );
-} else {
-  console.warn("#todoForm element not found");
-}
-
-// ✅ Attach the form submission event listener again inside async function
-(async function main() {
-  let sum = await import("./src/sum.js");
-  console.log(sum.default(2, 5));
-
-  todoForm.addEventListener("submit", todoSubmitHandler);
-})();
-```
-
----
-
-## Form Validation 
-
-1. `Disabling Browser Validation (novalidate attribute)`:
-You can turn off the browser’s built-in validation by adding the novalidate attribute to the `form` This allows you to fully control validation using JavaScript or a custom library, rather than relying on automatic checks.
-
-2. `HTML5 Validation Attributes` :
-HTML provides built-in validation through attributes like required, minlength, maxlength, min, max, pattern, and type. These attributes make it easy to add basic validation rules directly in the HTML without writing JavaScript.
-
-3. `Constraint Validation API (JavaScript-based control)`:
- The Constraint Validation API lets you programmatically check and customize form validation in JavaScript. It provides methods like checkValidity() and setCustomValidity(), and properties like validity and validationMessage, allowing you to display custom messages, check specific errors, and control when and how a form submits.
-
-
-
-
----
-
-```js
-// Import the necessary handler
-import { todoSubmitHandler } from "./src/submitHandler.js";
-
-// Select the form and input elements
-let todoForm = document.querySelector("#todoForm");
-let todoList = document.querySelector("#todoList");
-const todoInput = todoForm.querySelector("#todo"); // Assuming there's an input with id 'todo'
-
-// ✅ Add form submission event listener with validation
-if (todoForm) {
-  todoForm.addEventListener("submit", (e) => {
-    e.preventDefault(); // Prevent form from submitting immediately
-
-    // Form validation
-    if (!todoInput.value.trim()) { // Check if the input is empty or just spaces
-      alert("Please enter a todo task!");
-      todoInput.focus(); // Optionally focus on the input field
-      return; // Exit if validation fails
-    }
-
-    // If valid, proceed to submit
-    todoSubmitHandler(e, todoForm, todoList);
-  });
-} else {
-  console.warn("#todoForm element not found");
-}
-```
-
----
-
-## Form Data
-
-FormData is a JavaScript object that lets you easily collect and work with form data, especially for sending it with fetch() or XMLHttpRequest. It grabs form input values as key-value pairs.
-
----
-
-### Using FormData with a submit event
-
-```js
-<form id="myForm">
-  <input type="text" name="username" placeholder="Username" />
-  <input type="email" name="email" placeholder="Email" />
-  <button type="submit">Submit</button>
-</form>
-
-<script>
-  const form = document.getElementById('myForm')
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault() // prevent form from submitting normally
-
-    const formData = new FormData(form)
-
-    for (const [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`)
-    }
-
-    // You could also send formData using fetch()
-    // fetch('/submit', { method: 'POST', body: formData })
-  })
-</script>
-```
-
----
-
-## event.preventDefault() role in the todo app
-
-event.preventDefault() stops the browser’s default behavior when an event occurs.
-In a todo app, you’re using a form to allow the user to add a new task, something like this
-
-```html
-<form id="todo-form">
-  <input type="text" id="todo-input" placeholder="Add a new task">
-  <button type="submit">Add</button>
-</form>
-<ul id="todo-list"></ul>
-```
-
-Normally, when you click the submit button or press Enter inside the form, the browser submits the form and reloads the page (this is the default behavior for HTML forms).
-
-But in a todo app, you don’t want the page to reload—you just want to add the task dynamically with JavaScript.
-
-That’s where event.preventDefault() comes in. You call it inside the event handler for the form’s submit event to stop the form from reloading the page:
-
----
-
-```js
-const form = document.getElementById('todo-form');
-const input = document.getElementById('todo-input');
-const list = document.getElementById('todo-list');
-
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // 🚩 stop form from refreshing the page
-
-  const task = input.value.trim();
-  if (task !== "") {
-    const li = document.createElement('li');
-    li.textContent = task;
-    list.appendChild(li);
-    input.value = ""; // clear input
-  }
-});
-```
-
-Without event.preventDefault(), every time you submit:
-✅ The task would get added,
- ❌ but the page would reload immediately afterward—erasing everything from the DOM.
-By preventing the default behavior, you keep everything on the page dynamically updated without a refresh.
-
-In simple terms:
-event.preventDefault() stops the page from reloading when the form is submitted, allowing your JavaScript to handle adding the todo item smoothly.
-
-LINK TO THE REPO CREATED BY THE INSTRUCTOR
-https://github.com/Oluwasetemi/todo-js-app
-
-
 # React in Vanilla Projects
 
 ## Libraries vs Frameworks
@@ -1550,138 +1900,6 @@ const [todos, setTodos] = React.useState([]);
 
 ---
 
-# Month 2 Week 3 {.header-title}
-
-## Cont. of BUNDLERS (VITE) & TO-DO APP PR REVIEW
-
-### Summary:
-
-<br>
-
-# 1. Bundlers Overview (Continuation: Vite)
-<br>
-Browsers have limitations; bundlers help manage modern JavaScript features and dependencies.
-
-**Common bundlers:** Browserify, Webpack, Parcel, Vite
-
-## Benefits of bundlers:
-
-- Lazy loading (only load code when needed)
-- Dynamic imports for better performance
-
-<style>
-.header-title {
-  color: #3B82F6;
-  font-size: 2.5em;
-}
-</style>
-
----
-
-## 2. Focus on Vite
-
-Vite is a modern and fast bundler optimized for speed and simplicity.
-
-## 3. Creating a Vite Project
-
-**Long method:**
-
-
-```bash 
-mkdir new_project
-```
-
-```bash 
-cd new_project
-```
-
-```bash 
-npm init -y
-
-```
-
-```bash 
-npm install --save-dev vite
-
-```
-
-```bash 
-touch index.html index.css index.js
-
-```
-
----
-
-## Set up build scripts in `package.json`:
-
-```json
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-}
-```
-
-## Start the development server:
-
-```bash
-npm run dev
-```
-
-*You can use* **`pnpm`** *instead of* **`npm`** *to initialize and install dependencies.*
-
-## Shortcut method: Creating a Vite Project
-
-```bash
-npm create vite@latest new_project --template vanilla
-```
-
-```bash
-# or using pnpm
-pnpm create vite@latest new_project --template vanilla
-```
-
-```bash
-cd new_project
-```
-
----
-
-## Shortcut method: Creating a Vite Project cont.
-<br>
-
-```bash
-npm install
-```
-
-```bash
-npm run dev
-```
-
-## 4. Pull Request Review – To-do App (Mariam’s Branch)
-<br>
-- We cloned and checked out Mariam’s `vite` branch.
-- Added `.gitignore` to exclude `node_modules` and other unnecessary files from version control.
-- To list all files (including hidden ones like `.git`):
-
-```bash
-ls -la
-```
-
----
-
-## Contributions
-
-### Mariam:
-- Modularized the project structure  
-- Enabled double-click to edit feature  
-- Implemented `localStorage` saving  
-
-### Osawawo:
-- Added checkbox functionality
-
----
-
 # Thank You! {.thank-you}
 
 ## Questions & Discussion
@@ -1696,5 +1914,3 @@ ls -la
   font-size: 3em;
 }
 </style>
-
----
