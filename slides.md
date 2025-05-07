@@ -28,9 +28,15 @@ mdc: true
 - **<span @click="goToSlide(1)">Front Page</span>**
 - **<span @click="goToSlide(2)">Table of Contents</span>**
 - **<span @click="goToSlide(3)">Month 1 Week 1</span>**
-- **<span @click="goToSlide(7)">Month 1 Week 2</span>**
-- **<span @click="goToSlide(22)">Month 1 Week 3</span>**
-- **<span @click="goToSlide(65)">Month 2 Week 3</span>**
+- **<span @click="goToSlide(13)">Month 1 Week 2</span>**
+- **<span @click="goToSlide(17)">Month 1 Week 3</span>**
+- **<span @click="goToSlide(25)">Month 1 Week 4</span>**
+- **<span @click="goToSlide(33)">Month 2 Week 1</span>**
+- **<span @click="goToSlide(36)">Month 2 Week 2</span>**
+- **<span @click="goToSlide(45)">Month 2 Week 3</span>**
+- **<span @click="goToSlide(50)">Month 2 Week 4</span>**
+- **<span @click="goToSlide(61)">Extra-Lessons-1</span>**
+- **<span @click="goToSlide(70)">Extra-Lessons-2</span>**
 
 <script setup>
 const goToSlide = (index) => {
@@ -44,18 +50,13 @@ const goToSlide = (index) => {
 }
 span {
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: rgba(47, 45, 45, 0.38);
   text-decoration: none;
 }
 span:hover {
   color: rgb(16, 24, 235);
 }
 </style>
-
----
-
-transition: fade
-layout: default
 
 ---
 
@@ -113,8 +114,6 @@ _The return value can be a variable, array, object, string, number, boolean or e
 
 ---
 
-## transition: slide-left
-
 **Example:**
 
 ```js
@@ -138,10 +137,6 @@ function greet(name) {
 let result = greet("Zoe");
 console.log(result); // Output: undefined
 ```
-
----
-
-transition: slide-left
 
 ---
 
@@ -176,11 +171,6 @@ const getUsername = (user) => {
 ```js
 const getUsername = (user) => user.username;
 ```
-
----
-
-transition: fade
-layout: default
 
 ---
 
@@ -372,11 +362,6 @@ The function (callback) passed as a parameter to `addEventListener` will only be
 
 ---
 
-transition: slide-up
-layout: default
-
----
-
 # Month 1 Week 2 {.header-title}
 
 ## PROMISES
@@ -416,11 +401,6 @@ Contd on next page
 
 ---
 
-transition: fade-out
-layout: two-cols
-
----
-
 Sample syntax:
 
 ```js
@@ -435,7 +415,7 @@ reject(error); // promise is rejected with error
 
 <br>
 
-::right::
+---
 
 Sample Code:
 
@@ -468,11 +448,6 @@ fetchData("https://api.example.com/success")
   color: #8B5CF6;
 }
 </style>
-
----
-
-transition: fade-out
-layout: default
 
 ---
 
@@ -699,11 +674,6 @@ our needs by creating a fake data that looks like JSON.
 
 ---
 
-transition: slide-up
-layout: default
-
----
-
 # CSSOM (CSS Object Model)
 
 - CSSOM is the interface between JavaScript and CSS.
@@ -716,11 +686,6 @@ layout: default
   font-size: 2.5em;
 }
 </style>
-
----
-
-transition: slide-up
-layout: default
 
 ---
 
@@ -741,11 +706,6 @@ layout: default
 
 ---
 
-transition: slide-up
-layout: default
-
----
-
 # The Nodes
 
 - The entire HTML document is the **document node**, which is the **root** of the DOM.
@@ -758,11 +718,6 @@ layout: default
   font-size: 2.5em;
 }
 </style>
-
----
-
-transition: slide-up
-layout: two-cols
 
 ---
 
@@ -792,7 +747,7 @@ layout: two-cols
 </html>
 ```
 
-::right::
+---
 
 ## The nodes
 
@@ -804,11 +759,6 @@ layout: two-cols
   font-size: 2.5em;
 }
 </style>
-
----
-
-transition: slide-up
-layout: default
 
 ---
 
@@ -832,11 +782,6 @@ layout: default
   font-size: 2.5em;
 }
 </style>
-
----
-
-transition: slide-up
-layout: default
 
 ---
 
@@ -866,12 +811,6 @@ textPara.style.fontStyle = "italic";
   font-size: 2.5em;
 }
 </style>
-
----
-
-transition: fade
-layout: center
-class: text-center
 
 ---
 
@@ -1743,7 +1682,9 @@ The `package.json` file is the configuration file for Node.js projects. It defin
 
 ---
 
-# React in Vanilla Projects
+# WEEK 1 - EXTRA CLASS
+
+## React in Vanilla Projects
 
 ## Libraries vs Frameworks
 
