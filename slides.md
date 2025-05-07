@@ -126,13 +126,11 @@ Questions and Discussions
 </style>
 
 ---
-<img width="313" alt="Screenshot 2025-05-07 at 18 31 17" src="https://github.com/user-attachments/assets/7c2adeb4-6036-42d4-97a4-487d7aac8f58" />
+<img width="313" alt="Screenshot 2025-05-07 at 18 31 17" src="https://github.com/user-attachments/assets/166f3f4a-3ac3-4066-a014-54eced5482b7" />
 
 ---
-<img width="928" alt="Screenshot 2025-05-07 at 18 30 22" src="https://github.com/user-attachments/assets/387b664e-fa5b-4537-9a35-6cfcb2d09d79" />
+<img width="928" alt="Screenshot 2025-05-07 at 18 30 22" src="https://github.com/user-attachments/assets/35a14aa9-e250-4947-aaa7-33dce06a48f4" />
 
 ---
-
-![WhatsApp Image 2025-05-07 at 12 32 23](https://github.com/user-attachments/assets/c6dd42f2-4d97-4b5e-8847-fc1d94d466ac)
-
+![WhatsApp Image 2025-05-07 at 12 32 23](https://github.com/user-attachments/assets/db714542-217e-4cff-831b-cdf4e89ccd30)
 
