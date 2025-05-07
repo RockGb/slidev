@@ -126,6 +126,12 @@ Questions and Discussions
 </style>
 
 ---
+<img width="313" alt="Screenshot 2025-05-07 at 18 31 17" src="https://github.com/user-attachments/assets/7c2adeb4-6036-42d4-97a4-487d7aac8f58" />
+
+---
+<img width="928" alt="Screenshot 2025-05-07 at 18 30 22" src="https://github.com/user-attachments/assets/387b664e-fa5b-4537-9a35-6cfcb2d09d79" />
+
+---
 
 ![WhatsApp Image 2025-05-07 at 12 32 23](https://github.com/user-attachments/assets/c6dd42f2-4d97-4b5e-8847-fc1d94d466ac)
 
